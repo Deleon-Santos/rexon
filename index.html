@@ -72,13 +72,16 @@
 
     <main>
         <div class="main-banner" id="main-banner">
-            <ul>
-                <li><img src="./img/abraçadeiras.png" alt="abraçadeiras"></li>
-                <li><img src="./img/lonas.png" alt="lonas"></li>
-                <li><img src="./img/correias.png" alt="correias"></li>
-                <li><img src="./img/pisos.png" alt="pisos"></li>
-            </ul>
-
+            <button class="carousel-btn prev" aria-label="Anterior">&#10094;</button>
+            <div class="carousel-viewport">
+                <ul class="carousel-track">
+                    <li><img src="./img/abraçadeiras.png" alt="abraçadeiras"></li>
+                    <li><img src="./img/lonas.png" alt="lonas"></li>
+                    <li><img src="./img/correias.png" alt="correias"></li>
+                    <li><img src="./img/pisos.png" alt="pisos"></li>
+                </ul>
+            </div>
+            <button class="carousel-btn next" aria-label="Próximo">&#10095;</button>
         </div>
 
 
@@ -90,28 +93,16 @@
                 <div class="divider"></div>
                 <p>Conheça nossos representantes e distribuidores Rexon</p>
             </div>
-            <div class="main-content-distribuidores flex-container viewport" id="main-content-distribuidores">
-                <div class="distribuidor">
-                    <img src="https://rocril.com.br/img/layout/logo_rodape.png" alt="imagem do distribuidor 1">
-                    
+            <div class="main-content-distribuidores-wrapper">
+                <button class="carousel-btn prev" data-target="main-content-distribuidores" aria-label="Anterior">&#10094;</button>
+                <div class="carousel-viewport">
+                        <div class="carousel-viewport">
+                            <div class="main-content-distribuidores flex-container viewport" id="main-content-distribuidores" data-src="distributors.json">
+                                <!-- Imagens carregadas dinamicamente via distributors.json (máx 5 exibidas) -->
+                            </div>
+                        </div>
                 </div>
-                <div class="distribuidor">
-                    <img src="https://grvcorreias.com.br/wp-content/uploads/2014/09/logo-grvcorreias.png" alt="imagem do distribuidor 1">
-                    
-                </div>
-                <div class="distribuidor">
-                    <img src="https://rocril.com.br/img/layout/logo_rodape.png" alt="imagem do distribuidor 1">
-                    
-                </div>
-                <div class="distribuidor">
-                    <img src="https://www.interago.com.br/App/Sites/388/mc/Logo%20e%20favicon/logomarca%20tubotec%201.svg" alt="imagem do distribuidor 2">
-                    
-                </div>
-                <div class="distribuidor">
-                    <img src="https://www.marcante.com/assets/images/logo.png" alt="imagem do distribuidor 3">
-                    
-                </div>
-
+                <button class="carousel-btn next" data-target="main-content-distribuidores" aria-label="Próximo">&#10095;</button>
             </div>
             <button class="header-assossiar-button ">Seja um Representante</button>
         </section>
@@ -181,6 +172,8 @@
         </div>
         <span class="footer-bottom"><p>© 2026 Rexon. Todos os direitos reservados.</p></span>
     </footer>
+
+    <script src="carousel.js"></script>
 
 </body>
 </html>
