@@ -45,8 +45,16 @@
     flex-wrap: wrap;
 }
 .distribuidor img{
-    width: 150px;
-    height: auto;
+
+
+    display: block;
+
+    width: 100%;
+    height: 120px;
+
+    object-fit: contain;
+
+    
 }
 
 /* Carousel styles */
@@ -71,39 +79,111 @@
 .main-content-distribuidores{
     gap: 30px;
     align-items: center;
-}
-.main-content-distribuidores .distribuidor{
-    flex: 0 0 180px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.carousel-btn{
-    background: rgba(0,0,0,0.5);
-    color: #fff;
-    border: none;
-    padding: 10px 14px;
-    cursor: pointer;
-    font-size: 1.4rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-.main-banner .carousel-btn{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 5;
-}
-.main-banner .carousel-btn.prev{ left: 10px }
-.main-banner .carousel-btn.next{ right: 10px }
-.main-content-distribuidores-wrapper{
+     transition: transform 0.4s ease;
+}/* ==============================
+   CARROSSEL DE DISTRIBUIDORES
+   ============================== */
+
+.main-content-distribuidores-wrapper {
     display: flex;
     align-items: center;
     gap: 10px;
+    width: 100%;
+    margin: 20px 0;
 }
-.main-content-distribuidores-wrapper .carousel-btn{ background: transparent; color: var(--e-global-color-76e28554); font-weight: 700 }
 
-@media (max-width: 768px){
-    .main-content-distribuidores .distribuidor{ flex: 0 0 130px }
+/* Área que mostra somente os cards visíveis */
+.main-content-distribuidores-wrapper .carousel-viewport {
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Faixa que contém todos os cards */
+#main-content-distribuidores {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 30px;
+    width: max-content;
+    align-items: center;
+    transition: transform 0.5s ease;
+}
+
+/* Cada card */
+#main-content-distribuidores .distribuidor {
+    flex: 0 0 calc((100vw - 120px) / 5);
+    
+    height: 120px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+}
+
+/* Imagem */
+#main-content-distribuidores .distribuidor img {
+    display: block;
+
+    width: 100%;
+    height: 120px;
+
+    object-fit: contain;
+}
+
+/* Botões */
+.main-content-distribuidores-wrapper .carousel-btn {
+    flex: 0 0 auto;
+
+    background: transparent;
+    color: var(--e-global-color-76e28554);
+
+    border: none;
+
+    font-size: 1.8rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    padding: 10px;
+}
+
+.main-content-distribuidores-wrapper .carousel-btn:hover {
+    opacity: 0.7;
+}
+
+
+/* ==============================
+   RESPONSIVO
+   ============================== */
+
+@media (max-width: 1200px) {
+
+    #main-content-distribuidores .distribuidor {
+        flex-basis: calc((100vw - 120px) / 4);
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    #main-content-distribuidores .distribuidor {
+        flex-basis: calc((100vw - 90px) / 3);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    #main-content-distribuidores .distribuidor {
+        flex-basis: calc((100vw - 60px) / 2);
+    }
+}
+
+
+@media (max-width: 400px) {
+
+    #main-content-distribuidores .distribuidor {
+        flex-basis: calc(100vw - 60px);
+    }
 }

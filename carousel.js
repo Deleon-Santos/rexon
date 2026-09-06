@@ -67,10 +67,23 @@
         const container = document.getElementById(containerId);
         if(!container) return;
         try{
-            const res = await fetch(jsonPath);
-            if(!res.ok) throw new Error('HTTP ' + res.status);
-            const urls = await res.json();
-            const items = Array.isArray(urls) ? urls.slice(0, limit || 5) : [];
+            let urls = null;
+            // tenta fetch do arquivo JSON
+            try{
+                const res = await fetch(jsonPath);
+                if(!res.ok) throw new Error('HTTP ' + res.status);
+                urls = await res.json();
+            }catch(fetchErr){
+                // fallback: procura um <script type="application/json" id="distributors-data"> no HTML
+                const script = document.getElementById('distributors-data');
+                if(script){
+                    try{ urls = JSON.parse(script.textContent); }catch(e){ urls = null }
+                }else{
+                    console.warn('Falha ao carregar', jsonPath, fetchErr);
+                }
+            }
+            const urlsArr = urls;
+            const items = Array.isArray(urls) ? urls : [];
             items.forEach(u=>{
                 const div = document.createElement('div');
                 div.className = 'distribuidor';

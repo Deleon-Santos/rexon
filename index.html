@@ -95,13 +95,13 @@
             </div>
             <div class="main-content-distribuidores-wrapper">
                 <button class="carousel-btn prev" data-target="main-content-distribuidores" aria-label="Anterior">&#10094;</button>
-                <div class="carousel-viewport">
+               
                         <div class="carousel-viewport">
                             <div class="main-content-distribuidores flex-container viewport" id="main-content-distribuidores" data-src="distributors.json">
                                 <!-- Imagens carregadas dinamicamente via distributors.json (máx 5 exibidas) -->
                             </div>
                         </div>
-                </div>
+                
                 <button class="carousel-btn next" data-target="main-content-distribuidores" aria-label="Próximo">&#10095;</button>
             </div>
             <button class="header-assossiar-button ">Seja um Representante</button>
@@ -174,6 +174,23 @@
     </footer>
 
     <script src="carousel.js"></script>
+    <!-- Fallback JSON para ambientes sem servidor (útil ao abrir via file://) -->
+    <script id="distributors-data" type="application/json">
+    [
+      "https://rocril.com.br/img/layout/logo_rodape.png",
+      "https://grvcorreias.com.br/wp-content/uploads/2014/09/logo-grvcorreias.png",
+      "https://www.interago.com.br/App/Sites/388/mc/Logo%20e%20favicon/logomarca%20tubotec%201.svg",
+      "https://www.marcante.com/assets/images/logo.png",
+      "https://rexon.com.br/wp-content/uploads/2021/05/Logo-Rexon.png",
+      "https://www.example.com/images/extra-logo.png",
+  "https://rocril.com.br/img/layout/logo_rodape.png",
+  "https://grvcorreias.com.br/wp-content/uploads/2014/09/logo-grvcorreias.png",
+  "https://www.interago.com.br/App/Sites/388/mc/Logo%20e%20favicon/logomarca%20tubotec%201.svg",
+  "https://www.marcante.com/assets/images/logo.png",
+  "https://rexon.com.br/wp-content/uploads/2021/05/Logo-Rexon.png",
+  "https://www.example.com/images/extra-logo.png"
+    ]
+    </script>
 
 </body>
 </html>
