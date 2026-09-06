@@ -31,35 +31,49 @@
         start();
     }
 
-    // Carrossel para distribuidores (mostra múltiplos por view)
-    function distributorsCarousel(containerId){
+    // Carrossel para distribuidores (mostra múltiplos por view) com autoplay
+    function distributorsCarousel(containerId, interval){
         const container = document.getElementById(containerId);
         if(!container) return;
         const viewport = container.closest('.carousel-viewport');
         const track = container;
         let items = [];
         const wrapper = container.closest('.main-content-distribuidores-wrapper');
-        const prevBtn = wrapper.querySelector('.carousel-btn.prev');
-        const nextBtn = wrapper.querySelector('.carousel-btn.next');
+        const prevBtn = wrapper && wrapper.querySelector('.carousel-btn.prev');
+        const nextBtn = wrapper && wrapper.querySelector('.carousel-btn.next');
         let index = 0;
+        let timer = null;
 
-        function update(){
+        function calcMetrics(){
             items = Array.from(container.querySelectorAll('.distribuidor'));
-            if(items.length === 0) return;
+            if(items.length === 0) return { itemWidth: 0, visible: 1, maxIndex: 0 };
             const itemStyle = items[0].getBoundingClientRect();
             const itemWidth = itemStyle.width;
             const visible = Math.max(1, Math.floor(viewport.offsetWidth / (itemWidth + 30)));
             const maxIndex = Math.max(0, items.length - visible);
+            return { itemWidth, visible, maxIndex };
+        }
+
+        function update(){
+            const { itemWidth, maxIndex } = calcMetrics();
+            if(!itemWidth) return;
             if(index > maxIndex) index = maxIndex;
             const translate = -(index * (itemWidth + 30));
             track.style.transform = `translateX(${translate}px)`;
         }
 
         prevBtn && prevBtn.addEventListener('click', ()=>{ index = Math.max(0, index-1); update(); });
-        nextBtn && nextBtn.addEventListener('click', ()=>{ index++; update(); });
+        nextBtn && nextBtn.addEventListener('click', ()=>{ const { maxIndex } = calcMetrics(); index = (index + 1) > maxIndex ? 0 : index + 1; update(); });
 
+        function start(){ stop(); timer = setInterval(()=>{ const { maxIndex } = calcMetrics(); index = (index + 1) > maxIndex ? 0 : index + 1; update(); }, interval || 4000); }
+        function stop(){ if(timer){ clearInterval(timer); timer = null; } }
+
+        wrapper && wrapper.addEventListener('mouseenter', stop);
+        wrapper && wrapper.addEventListener('mouseleave', start);
         window.addEventListener('resize', ()=> setTimeout(update,50));
+
         update();
+        start();
     }
 
     // Carrega imagens de distribuidores a partir de um JSON e injeta no container
@@ -93,8 +107,8 @@
                 div.appendChild(img);
                 container.appendChild(div);
             });
-            // inicializa o carrossel após injetar os itens
-            distributorsCarousel(containerId);
+            // inicializa o carrossel após injetar os itens (autoplay a cada 4s)
+            distributorsCarousel(containerId, 4000);
         }catch(err){
             console.error('Erro carregando distribuidores:', err);
         }

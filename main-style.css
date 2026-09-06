@@ -18,6 +18,7 @@
    flex-direction: column;
     align-items: center;
     gap: 30px;
+    margin: 0 auto;
 }
 
 .main-content-container h2{
@@ -40,16 +41,15 @@
     background-repeat: repeat-x;
 }
 .main-content-distribuidores{
-   margin:20px 0;
-    
+   margin:o auto;
+    width: 1060px;
     flex-wrap: wrap;
 }
 .distribuidor img{
 
-
     display: block;
 
-    width: 100%;
+    width: 100px;
     height: 120px;
 
     object-fit: contain;
@@ -57,12 +57,19 @@
     
 }
 
+
+
+
+
+
+
+
+
+
 /* Carousel styles */
-.carousel-viewport{
-    overflow: hidden;
-    width: 100%;
-}
+
 .carousel-track{
+    
     display: flex;
     gap: 0;
     transition: transform 0.5s ease;
@@ -76,44 +83,90 @@
     width: 100%;
     height: auto;
 }
+
 .main-content-distribuidores{
     gap: 30px;
     align-items: center;
-     transition: transform 0.4s ease;
-}/* ==============================
-   CARROSSEL DE DISTRIBUIDORES
-   ============================== */
-
-.main-content-distribuidores-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
     margin: 20px 0;
-}
-
-/* Área que mostra somente os cards visíveis */
-.main-content-distribuidores-wrapper .carousel-viewport {
-    overflow: hidden;
-    width: 100%;
-}
-
-/* Faixa que contém todos os cards */
-#main-content-distribuidores {
     display: flex;
     flex-wrap: nowrap;
-    gap: 30px;
-    width: max-content;
-    align-items: center;
+  
+
+   
+
     transition: transform 0.5s ease;
 }
 
-/* Cada card */
-#main-content-distribuidores .distribuidor {
-    flex: 0 0 calc((100vw - 120px) / 5);
-    
-    height: 120px;
 
+.main-content-distribuidores .distribuidor{
+    flex: 0 0 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.carousel-btn{
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    border: none;
+    padding: 10px 14px;
+    cursor: pointer;
+    font-size: 1.4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-banner .carousel-btn{
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    z-index: 5;
+}
+.main-banner .carousel-btn.prev{ left: 10px }
+.main-banner .carousel-btn.next{ right: 10px }
+.main-content-distribuidores-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+   
+}
+.main-content-distribuidores-wrapper .carousel-btn{
+     background: transparent; 
+     color: var(--e-global-color-76e28554); 
+     font-weight: 700 
+    }
+
+
+
+.distribuidor {
+ 
+    
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -121,69 +174,73 @@
     box-sizing: border-box;
 }
 
-/* Imagem */
+#main-content-distribuidores {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    gap: 30px;
+
+    width: max-content;
+
+    transition: transform 0.5s ease;
+}
+#main-content-distribuidores {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    gap: 30px;
+
+    width: max-content;
+
+    transition: transform 0.5s ease;
+}
 #main-content-distribuidores .distribuidor img {
     display: block;
-
     width: 100%;
     height: 120px;
-
     object-fit: contain;
 }
 
-/* Botões */
-.main-content-distribuidores-wrapper .carousel-btn {
-    flex: 0 0 auto;
-
-    background: transparent;
-    color: var(--e-global-color-76e28554);
-
-    border: none;
-
-    font-size: 1.8rem;
-    font-weight: 700;
-
-    cursor: pointer;
-
-    padding: 10px;
+/* Overrides to ensure distributors carousel fits max 1060px and shows 5 items */
+.main-content-distribuidores-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 1160px;
+    width: 100%;
+    margin: 20px auto;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 0 10px;
 }
-
-.main-content-distribuidores-wrapper .carousel-btn:hover {
-    opacity: 0.7;
+.carousel-viewport{
+    overflow: hidden;
+    width: 100%;
 }
-
-
-/* ==============================
-   RESPONSIVO
-   ============================== */
-
-@media (max-width: 1200px) {
-
-    #main-content-distribuidores .distribuidor {
-        flex-basis: calc((100vw - 120px) / 4);
-    }
+.main-content-distribuidores{
+    gap: 30px;
+    display: flex;
+    flex-wrap: nowrap;
+    transition: transform 0.4s ease;
+    will-change: transform;
+    width: 100%;
+}
+.main-content-distribuidores .distribuidor{
+    
+    box-sizing: border-box;
 }
 
 
-@media (max-width: 900px) {
-
-    #main-content-distribuidores .distribuidor {
-        flex-basis: calc((100vw - 90px) / 3);
-    }
-}
 
 
-@media (max-width: 600px) {
+.main-info-catalogo{
+    background: #fff;
+    background-image: url(https://rexon.com.br/wp-content/uploads/2021/01/bg_itens.png);
+    background-position: center center;
+}   
 
-    #main-content-distribuidores .distribuidor {
-        flex-basis: calc((100vw - 60px) / 2);
-    }
-}
-
-
-@media (max-width: 400px) {
-
-    #main-content-distribuidores .distribuidor {
-        flex-basis: calc(100vw - 60px);
-    }
+@media (max-width: 768px){
+    .main-content-distribuidores .distribuidor{ flex: 0 0 130px }
 }

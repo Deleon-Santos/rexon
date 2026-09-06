@@ -1,3 +1,6 @@
+.header{
+    background: var(--e-global-color-65d2b2c8);
+}
 .topo{
     background: var(--e-global-color-2e25d6e3);
     color: var(--e-global-color-text);
