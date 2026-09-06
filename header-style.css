@@ -5,17 +5,20 @@
     background: var(--e-global-color-2e25d6e3);
     color: var(--e-global-color-text);
     margin: 0 auto;
+    padding:  9px 0;
 }
 
 .header-topo-contact,.header-topo-search{  
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
+    gap: 20px;
     font-size: 14px;  
+    padding: 0;
 }
 .header-topo-search{
     
+   
     border: 1px solid var(--e-global-color-text);
     border-radius: 5px;
 }
@@ -24,12 +27,13 @@
     font-size: 1rem;
     font-weight: var(--e-global-typography-text-font-weight);
     border: none;
-    padding: 0 10px;
+    gap: 10px;
+    
 }
 .topo i{
     color: var(--e-global-color-text);
     font-size: 1rem;
-    padding: 0 5px;
+    padding-right:  5px;
 }
 .topo input{
     background: transparent;
@@ -37,10 +41,13 @@
     padding: 5px 10px;
     border-radius: 5px;
 }
-
+.header-logo{
+    padding: 18px 0;
+}
 .header-logo img{
     width: 180px;
     height: auto;
+    
 }
 .header-menu-nav ul{ 
     gap: 40px;
@@ -61,7 +68,7 @@
     background: var(--e-global-color-1e380458);
     color: var(--e-global-color-65d2b2c8);
     border: 1px solid var(--e-global-color-text);
-    padding: 10px 20px;
+    padding: 10px 25px;
     font-size: 1rem;
     font-weight: var(--e-global-typography-text-font-weight);
     cursor: pointer;

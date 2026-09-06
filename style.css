@@ -35,7 +35,8 @@
     }
     .viewport {
         margin: 0 auto;
-        width: 1160px;
+        max-width: 1150px;
+        padding: 0 5px;
         
     
     }
