@@ -1,0 +1,50 @@
+    :root {
+        --e-global-color-primary: #6EC1E4;
+        --e-global-color-secondary: #cbcdd1;
+        --e-global-color-text: #2c2b2b;
+        --e-global-color-accent: #61CE70;
+        --e-global-color-1e380458: #28377e;
+        --e-global-color-168ad849: #23A455;
+        --e-global-color-65d2b2c8: #FFF;
+        --e-global-color-76e28554: #000;
+        --e-global-color-765a86d6: #F29400;
+        --e-global-color-3f507803: #14245A;
+        --e-global-color-33c9269e: #F7941E;
+        --e-global-color-2e25d6e3: #FFCC01;
+        --e-global-color-a49f53f: #F9C42D;
+        --e-global-color-8dfcf8f: #393A3C;
+        --e-global-typography-primary-font-family: "Roboto";
+        --e-global-typography-primary-font-weight: 600;
+        --e-global-typography-secondary-font-family: "Roboto";
+        --e-global-typography-secondary-font-weight: 400;
+        --e-global-typography-text-font-family: "Roboto";
+        --e-global-typography-text-font-weight: 400;
+        --e-global-typography-accent-font-family: "Roboto";
+        --e-global-typography-accent-font-weight: 500;
+    }
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        font-family: var(--e-global-typography-text-font-family), Sans-serif;
+        font-weight: var(--e-global-typography-text-font-weight);
+        color: var(--e-global-color-text);
+    }
+    .viewport {
+        margin: 0 auto;
+        width: 1160px;
+        
+    
+    }
+    .flex-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .padding-container {
+        padding: 15px;
+    }
+
+    
