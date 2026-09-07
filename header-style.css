@@ -64,27 +64,14 @@
     font-weight: var(--e-global-typography-text-font-weight);
 }
 
-.header-assossiar-button{
-    background: var(--e-global-color-1e380458);
-    color: var(--e-global-color-65d2b2c8);
-    border: 1px solid var(--e-global-color-text);
-    padding: 10px 25px;
-    font-size: 1rem;
-    font-weight: var(--e-global-typography-text-font-weight);
-    cursor: pointer;
-    border-radius: 3px;
-}
+
 
 .menu-categorias{
     background: var(--e-global-color-secondary);
     
     
 }
-.menu-categorias ul{
-    
-    gap: 10px;
-   
-}
+
 .menu-categorias ul li{
     list-style: none;
     padding: 15px 0;

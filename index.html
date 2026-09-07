@@ -6,6 +6,7 @@
     <title>Rexon-Correias e Abraçadeiras</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="header-style.css">
+    <link rel="stylesheet" href="./menu-casade.css">
     <link rel="stylesheet" href="footer-style.css">
     <link rel="stylesheet" href="main-style.css">
     
@@ -41,10 +42,10 @@
                     <div class="header-menu">
                         <nav class="header-menu-nav">
                             <ul class="flex-container padding-container">
-                                <li><a href="#">HOME</a></li>
-                                <li><a href="#">QUEM SOMOS</a></li>
-                                <li><a href="#">BLOG</a></li>
-                                <li><a href="#">CONTATOS</a></li>
+                                <li><a class="link" href="#head">HOME</a></li>
+                                <li><a class="link" href="https://rexon.com.br/quem-somos/">QUEM SOMOS</a></li>
+                                <li><a class="link" href="https://rexon.com.br/blog/">BLOG</a></li>
+                                <li><a class="link" href="https://rexon.com.br/contato/">CONTATO</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -55,17 +56,51 @@
 
             </div>
             <div class="menu-categorias">
-                <nav class="menu-categoris-nav viewport">
-                    <ul class="flex-container flex-container">
-                        <li><a href="#">CORREIAS INDUSTRIAIS</a></li>
-                        <li><a href="#">FIXAÇÃO</a></li>
-                        <li><a href="#">LAMINAS E PISO DE BORRACHA</a></li>
-                        <li><a href="#">MANGUEIRAS</a></li>
-                        <li><a href="#">LONAS DE POLIETILENO</a></li>
-                    </ul>
 
-                </nav>
-            </div>
+    <nav class="menu-categoris-nav viewport">
+        <ul class="flex-container">
+
+            <li>
+                <a
+                    class="link-cascade"
+                    id="correias"
+                    href="https://rexon.com.br/linhas-produto/correias-industriais/"
+                >
+                    CORREIAS INDUSTRIAIS ▼
+                </a>
+            </li>
+
+            <li>
+                <a class="link-cascade" id="fixacao" href="#">
+                    FIXAÇÃO ▼
+                </a>
+            </li>
+
+            <li>
+                <a class="link-cascade" id="laminas" href="#">
+                    LÂMINAS E PISO DE BORRACHA ▼
+                </a>
+            </li>
+
+            <li>
+                <a class="link-cascade" id="mangueira" href="#">
+                    MANGUEIRAS ▼
+                </a>
+            </li>
+
+            <li>
+                <a class="link-cascade" id="lonas" href="#">
+                    LONAS DE POLIETILENO ▼
+                </a>
+            </li>
+
+        </ul>
+    </nav>
+
+    <!-- O submenu será criado aqui pelo JavaScript -->
+    <div class="cascade" id="cascade"></div>
+
+</div>
         </header>
     </section>
 
@@ -224,25 +259,10 @@
         </div>
         <span class="footer-bottom"><p>© 2026 Rexon. Todos os direitos reservados.</p></span>
     </footer>
-
-    <script src="carousel.js"></script>
+    <script src="./cascade.js"></script>
+    <script src="./carousel.js"></script>
     <!-- Fallback JSON para ambientes sem servidor (útil ao abrir via file://) -->
-    <script id="distributors-data" type="application/json">
-    [
-      "https://rocril.com.br/img/layout/logo_rodape.png",
-      "https://grvcorreias.com.br/wp-content/uploads/2014/09/logo-grvcorreias.png",
-      "https://www.interago.com.br/App/Sites/388/mc/Logo%20e%20favicon/logomarca%20tubotec%201.svg",
-      "https://www.marcante.com/assets/images/logo.png",
-      "https://rexon.com.br/wp-content/uploads/2021/05/Logo-Rexon.png",
-      "https://www.example.com/images/extra-logo.png",
-  "https://rocril.com.br/img/layout/logo_rodape.png",
-  "https://grvcorreias.com.br/wp-content/uploads/2014/09/logo-grvcorreias.png",
-  "https://www.interago.com.br/App/Sites/388/mc/Logo%20e%20favicon/logomarca%20tubotec%201.svg",
-  "https://www.marcante.com/assets/images/logo.png",
-  "https://rexon.com.br/wp-content/uploads/2021/05/Logo-Rexon.png",
-  "https://www.example.com/images/extra-logo.png"
-    ]
-    </script>
+    
 
 </body>
 </html>
