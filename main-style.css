@@ -250,6 +250,8 @@
     
     
 }
+
+
 .info-image{
    
    
@@ -259,6 +261,7 @@
 }
 
 .info-text {
+    
     max-width: 520px;
     min-height: 100px;
     padding: 5px;
@@ -269,6 +272,7 @@
     
 }
 .info-text p{
+    text-decoration: none;
     margin-bottom: 15px;
     font-size: 1rem;
     color: var(--e-global-color-text);

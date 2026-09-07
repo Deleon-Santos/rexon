@@ -1,30 +1,64 @@
 
 const categorias = {
     correias: [
-        "Correias em V",
-        "Sincronizadoras de borracha",
-        "Sincronizadoras de PU"
+        {
+            nome: "Correias em V",
+            url: "https://rexon.com.br/produto/correias-em-v/"
+        },
+        {
+            nome: "Sincronizadoras de borracha",
+            url: "https://rexon.com.br/produto/sincronizadoras-de-borracha/"
+        },
+        {
+            nome: "Sincronizadoras de PU",
+            url: "https://rexon.com.br/produto/sincronizadoras-de-pu/"
+        }
     ],
 
     fixacao: [
-        "Abraçadeiras de nylon",
-        "Abraçadeiras galvanizadas",
-        "Abraçadeiras de carbono"
+        {
+            nome: "Abraçadeiras de nylon",
+            url: "https://rexon.com.br/produto/abracadeiras-de-nylon/"
+        },
+        {
+            nome: "Abraçadeiras galvanizadas",
+            url: "https://rexon.com.br/produto/abracadeiras-galvanizadas/"
+        },
+        {
+            nome: "Abraçadeiras de carbono",
+            url: "https://rexon.com.br/produto/abracadeiras-de-carbono/"
+        }
     ],
 
     laminas: [
-        "Lâminas de borracha",
-        "Piso de borracha"
+        {
+            nome: "Lâminas de borracha",
+            url: "https://rexon.com.br/produto/laminas-de-borracha/"
+        },
+        {
+            nome: "Piso de borracha",
+            url: "https://rexon.com.br/produto/piso-de-borracha/"
+        }
     ],
 
     mangueira: [
-        "Mangueiras hidráulicas",
-        "Mangueiras a óleo"
+        {
+            nome: "Mangueiras hidráulicas",
+            url: "https://rexon.com.br/produto/mangueiras-hidraulicas/"
+        },
+        {
+            nome: "Mangueiras a óleo",
+            url: "https://rexon.com.br/produto/mangueiras-a-oleo/"
+        }
     ],
 
     lonas: [
-        "Lonas de polietileno"
+        {
+            nome: "Lonas de polietileno",
+            url: "https://rexon.com.br/produto/lonas-de-polietileno/"
+        }
     ]
+
 };
 
 const links = document.querySelectorAll(".link-cascade");
@@ -49,7 +83,7 @@ links.forEach(link => {
             <ul class="cascade-list">
                 ${produtos.map(produto => `
                     <li>
-                        <a href="#">${produto}</a>
+                        <a href="${produto.url}" target="_blank" rel="noopener noreferrer">${produto.nome}</a>
                     </li>
                 `).join("")}
             </ul>

@@ -4,29 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rexon-Correias e Abraçadeiras</title>
+
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="header-style.css">
     <link rel="stylesheet" href="./menu-casade.css">
     <link rel="stylesheet" href="footer-style.css">
     <link rel="stylesheet" href="main-style.css">
     
-    
-<link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 </head>
 
 <body class="view">
-    <section >
+    <section calss="header-section">
         <header class="header " id="head">
+
             <div class="topo " >
                 <div class="viewport flex-container">
                     <div class="header-topo-contact flex-container padding-container">
                         <span class="tel-fixo flex-container"><i class="fa-solid fa-phone"></i><p>(11) 0000-0000</p></span>
                         <span class=" tel-zap flex-container"><i class="fa-brands fa-whatsapp"></i><p>(11) 0.0000-0000</p></span>
                     </div>
+
                     <div class="header-topo-search">
                         <input type="search" name="search" id="searchInput" placeholder="pesquisar..." >
                         <i class="fa-solid fa-magnifying-glass"></i>
@@ -39,6 +38,7 @@
                     <div class="header-logo padding-container">
                         <img src="https://rexon.com.br/wp-content/uploads/2021/05/Logo-Rexon.png" alt="logomarca da empresa rexon">
                     </div>
+
                     <div class="header-menu">
                         <nav class="header-menu-nav">
                             <ul class="flex-container padding-container">
@@ -49,58 +49,36 @@
                             </ul>
                         </nav>
                     </div>
+
                     <div class="header-assossiar flex-container">
-                        <button class="header-assossiar-button flex-container">Quero ser Revendedor</button>
+                        <a class="header-assossiar-button flex-container" href="https://rexon.com.br/quero-ser-revendedor/">Quero ser Revendedor</a>
                     </div>
                 </div>
-
             </div>
+
             <div class="menu-categorias">
+                <nav class="menu-categoris-nav viewport">
+                    <ul class="flex-container">
+                        <li><a class="link-cascade "id="correias" href="https://rexon.com.br/linhas-produto/correias-industriais/">
+                            CORREIAS INDUSTRIAIS ▼</a></li>
 
-    <nav class="menu-categoris-nav viewport">
-        <ul class="flex-container">
+                        <li><a class="link-cascade" id="fixacao" href="https://rexon.com.br/lp-rexon-abracadeiras/" target="_blank" rel="noopener noreferrer">
+                                FIXAÇÃO ▼</a></li>
+                        
+                        <li><a class="link-cascade" id="laminas" href="https://rexon.com.br/categorias-produto/laminas-e-piso-de-borracha/" target="_blank" rel="noopener noreferrer">
+                                LÂMINAS E PISO DE BORRACHA ▼</a></li>                       
+                        
+                        <li><a class="link-cascade" id="mangueira" href="https://rexon.com.br/categorias-produto/mangueiras/" target="_blank" rel="noopener noreferrer">
+                                MANGUEIRAS ▼</a></li>                       
 
-            <li>
-                <a
-                    class="link-cascade"
-                    id="correias"
-                    href="https://rexon.com.br/linhas-produto/correias-industriais/"
-                >
-                    CORREIAS INDUSTRIAIS ▼
-                </a>
-            </li>
+                        <li><a class="link-cascade" id="lonas" href="https://rexon.com.br/categorias-produto/lonas-de-polietileno/" target="_blank" rel="noopener noreferrer">
+                                LONAS DE POLIETILENO ▼
+                            </a></li>
+                    </ul>
+                </nav>
 
-            <li>
-                <a class="link-cascade" id="fixacao" href="#">
-                    FIXAÇÃO ▼
-                </a>
-            </li>
-
-            <li>
-                <a class="link-cascade" id="laminas" href="#">
-                    LÂMINAS E PISO DE BORRACHA ▼
-                </a>
-            </li>
-
-            <li>
-                <a class="link-cascade" id="mangueira" href="#">
-                    MANGUEIRAS ▼
-                </a>
-            </li>
-
-            <li>
-                <a class="link-cascade" id="lonas" href="#">
-                    LONAS DE POLIETILENO ▼
-                </a>
-            </li>
-
-        </ul>
-    </nav>
-
-    <!-- O submenu será criado aqui pelo JavaScript -->
-    <div class="cascade" id="cascade"></div>
-
-</div>
+                <div class="cascade" id="cascade"></div>
+            </div>
         </header>
     </section>
 
@@ -110,10 +88,10 @@
             <button class="carousel-btn prev" aria-label="Anterior">&#10094;</button>
             <div class="carousel-viewport">
                 <ul class="carousel-track">
-                    <li><img src="./img/abraçadeiras.png" alt="abraçadeiras"></li>
-                    <li><img src="./img/lonas.png" alt="lonas"></li>
-                    <li><img src="./img/correias.png" alt="correias"></li>
-                    <li><img src="./img/pisos.png" alt="pisos"></li>
+                    <li><a href="https://rexon.com.br/lp-rexon-abracadeiras/" target="_blank" rel="noopener noreferrer"><img src="./img/abraçadeiras.png" alt="abraçadeiras"></a></li>
+                    <li><a href="https://rexon.com.br/categorias-produto/lonas-de-polietileno/" target="_blank" rel="noopener noreferrer"><img src="./img/lonas.png" alt="lonas"></a></li>
+                    <li><a href="https://rexon.com.br/linhas-produto/correias-industriais/" target="_blank" rel="noopener noreferrer"><img src="./img/correias.png" alt="correias"></a></li>
+                    <li><a href="https://rexon.com.br/categorias-produto/pisos-de-borracha/" target="_blank" rel="noopener noreferrer"><img src="./img/pisos.png" alt="pisos" target="_blank" rel="noopener noreferrer"></a></li>
                 </ul>
             </div>
             <button class="carousel-btn next" aria-label="Próximo">&#10095;</button>
@@ -143,7 +121,7 @@
                
                 <button class="carousel-btn next" data-target="main-content-distribuidores" aria-label="Próximo">&#10095;</button>
             </div>
-            <button class="header-assossiar-button ">Seja um Representante</button>
+            <a href="https://rexon.com.br/quero-ser-revendedor/" class="header-assossiar-button ">Seja um Representante</a>
         </section>
 
 
@@ -152,22 +130,28 @@
 
         <section class="main-info-catalogo flex-container">
             <div class="info-catalogo-content flex-container viewport">
-                <div class="info-catalogo padding-container flex-container">
-                    <div class="info-image"><img src="https://rexon.com.br/wp-content/uploads/2021/01/img_nosso-canal.png" alt="image de informaçao"></div>
-                    <div><img src="https://rexon.com.br/wp-content/uploads/2021/01/icon_nosso-canal.png" alt=""></div>
-                    <div
-                    class="info-text"><p>Já conheçe o nosso canal no youtube?</p>
-                        <p>Acesse e fique por dentro dos nossos vídeos para informações, dica e conteúdos exclusivos</p></div>
-                <button class="header-assossiar-button ">Saiba mais</button>
+                
+                    <div class="info-catalogo padding-container flex-container">
+                        <div class="info-image"><a href="https://www.youtube.com/channel/UCg1zlnyntUQ2ZFvBBZ5mleg" target="_blank"><img src="https://rexon.com.br/wp-content/uploads/2021/01/img_nosso-canal.png" alt="image de informaçao"></a></div>
+                        <div><img src="https://rexon.com.br/wp-content/uploads/2021/01/icon_nosso-canal.png" alt=""></div>
+                        <div
+                            class="info-text"><p>Já conheçe o nosso canal no youtube?</p>
+                            <p>Acesse e fique por dentro dos nossos vídeos para informações, dica e conteúdos exclusivos</p>
+                        </div>
+                        <a href="https://www.youtube.com/channel/UCg1zlnyntUQ2ZFvBBZ5mleg" target="_blank"><button class="header-assossiar-button ">Saiba mais</button></a>
                     </div>
-                <div class="info-catalogo padding-container flex-container">
-                    <div class="info-image"><img src="https://rexon.com.br/wp-content/uploads/2021/01/img_catalogo.png" alt="imagem de catalogo"></div>
-                    <div><img src="https://rexon.com.br/wp-content/uploads/2021/01/icon_download-do-catalogo.png" alt=""></div>
+                
+
+                
+                    <div class="info-catalogo padding-container flex-container">
+                        <div class="info-image"><a href="https://rexon.com.br/catalogos/" target="_blank"><img src="https://rexon.com.br/wp-content/uploads/2021/01/img_catalogo.png" alt="imagem de catalogo"></a></div>
+                        <div><img src="https://rexon.com.br/wp-content/uploads/2021/01/icon_download-do-catalogo.png" alt=""></div>
                     
-                    <div class="info-text"><p>Faça download do nosso catalogo</p>
-                        <p>Veja nossa linha completa de produtos e todas as suas especificações</p></div>
-                    <button class="header-assossiar-button ">Saiba mais</button>
-                </div>
+                        <div class="info-text"><p>Faça download do nosso catalogo</p>
+                            <p>Veja nossa linha completa de produtos e todas as suas especificações</p></div>
+                        <a href="https://rexon.com.br/catalogos/" target="_blank"><button class="header-assossiar-button ">Saiba mais</button></a>
+                    </div>
+               
 
                 
 
@@ -201,14 +185,14 @@
         <div class="viewport">
             <div class="footer-content flex-container">
                 <div class="footer-logo flex-container">
-                    <img src="https://rexon.com.br/wp-content/uploads/2021/05/Logo-Rexon.png" alt="logomarca da empresa rexon">
-                    <ul class="flex-container">
-                        <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li> 
-                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <img src="https://rexon.com.br/wp-content/uploads/2022/03/Logo-Rexon-branco.png" alt="logomarca da empresa rexon">
+                    <ul >
+                        <li><a href="https://www.youtube.com/channel/UCg1zlnyntUQ2ZFvBBZ5mleg" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+                        <li><a href="https://www.facebook.com/rexonindustriais/" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="https://www.linkedin.com/company/rexon/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li> 
+                        <li><a href="https://www.instagram.com/rexon_industriais/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://www.tiktok.com/@rexon_industriais" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=5511989332452" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
                     </ul>
                     <p>DAISAN PRODUTOS INDUSTRAIS LTDA<br>
             
@@ -222,11 +206,11 @@
                         <h3>MAPA DO SITE</h3>
                     </div> 
                     <ul class="flex-container">
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#">QUEM SOMOS</a></li>
-                        <li><a href="#">BLOG</a></li>
-                        <li><a href="#">CONTATOS</a></li>
-                        <li><a href="#">FRAUDES EM BOLETOS</a></li>
+                        <li><a href="#head">HOME</a></li>
+                        <li><a href="https://rexon.com.br/quem-somos/">QUEM SOMOS</a></li>
+                        <li><a href="https://rexon.com.br/blog/">BLOG</a></li>
+                        <li><a href="https://rexon.com.br/contato/">CONTATOS</a></li>
+                        <li><a href="https://rexon.com.br/Fraude_Boletos.pdf" target="_blank">FRAUDES EM BOLETOS</a></li>
                     </ul> 
                 </div>
                 <div class="footer-menu ">
@@ -246,13 +230,13 @@
                         <h3>CONTATOS</h3>
                     </div>
                     <ul class="flex-container">
-                        <li><a href="#">Telefone: (11) 0000-0000</a></li>
-                        <li><a href="#">Whatsapp(11) 0.0000-0000</a></li>
-                        <li><a href="#">Email: contato@rexon.com.br</a></li>
+                        <li><p>Telefone: (11) 0000-0000</p></li>
+                        <li><p>Whatsapp(11) 0.0000-0000</p></li>
+                        <li><p>Email: contato@rexon.com.br</p></li>
                         
                         
                     </ul>
-                    <button class="header-assossiar-button footer-assossiar-button">Quero ser revendedor</button>
+                    <a href="https://rexon.com.br/quero-ser-revendedor/"><button class="header-assossiar-button footer-assossiar-button">Quero ser revendedor</button></a>
                     
                 </div>
             </div>

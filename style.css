@@ -23,6 +23,9 @@
         --e-global-typography-accent-font-weight: 500;
     }
 
+    html{
+        scroll-behavior: smooth;
+    }
     * {
         box-sizing: border-box;
         margin: 0;
@@ -53,20 +56,20 @@
     }
 
     .link {
-        
+        box-sizing: border-box;
         display: inline-block;
-        transition: transform 0.3s ease, color 0.3s ease;
+        transition: transform 0.3s ease-in, color 0.3s ease-out;
         padding: 5px 25px;
     }
 
     .link:hover {
         color: var(--e-global-color-2e25d6e3);
-        transform: scale(1.09);
-        font-weight: 600;
+        transform: scale(1.1);
+        
     }  
 
     .header-assossiar-button{
-        
+        text-decoration: none;
         background: var(--e-global-color-1e380458);
         color: var(--e-global-color-65d2b2c8);
         border: 1px solid var(--e-global-color-text);
