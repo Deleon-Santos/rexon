@@ -1,21 +1,38 @@
 .main-content {
     flex-direction: column;
     gap: 30px;
-   background: var(--e-global-color-secondary);
+    background: var(--e-global-color-secondary);
     padding: 50px 0;
 }
+
+.main-banner{
+    position: relative;
+}
+
 .main-banner img{
     width: 100%;
-    
-    
-    background-size: cover;
-    
-    
-
-    
+    background-size: cover; 
 }
+
+.carousel-track{ 
+    display: flex;
+    gap: 0;
+    transition: transform 0.5s ease;
+}
+
+.main-banner .carousel-track li{
+    list-style: none;
+    min-width: 100%;
+}
+
+.main-banner .carousel-track img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 .main-content-container{
-   flex-direction: column;
+    flex-direction: column;
     align-items: center;
     gap: 30px;
     margin: 0 auto;
@@ -26,48 +43,20 @@
     font-weight: var(--e-global-typography-primary-font-weight);
     color: var(--e-global-color-76e28554);
 }
+
 .main-content-container p{
     font-size: 1.5rem;
     font-weight: var(--e-global-typography-text-font-weight);
     color: var(--e-global-color-76e28554);
     text-align: center;
 }
+
 .divider {
     width: 150px;
     height: 15px;
-
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 16' fill='none' stroke='%23F29400' stroke-width='2' stroke-linecap='square' stroke-miterlimit='10'%3E%3Cg transform='translate(-12,0)'%3E%3Cpath d='M28,0L10,18'/%3E%3Cpath d='M18,0L0,18'/%3E%3Cpath d='M48,0L30,18'/%3E%3Cpath d='M38,0L20,18'/%3E%3C/g%3E%3C/svg%3E");
-
     background-repeat: repeat-x;
 }
-
-
-
-
-
-
-
-
-
-/* Carousel styles */
-
-.carousel-track{
-    
-    display: flex;
-    gap: 0;
-    transition: transform 0.5s ease;
-}
-.main-banner .carousel-track li{
-    list-style: none;
-    min-width: 100%;
-}
-.main-banner .carousel-track img{
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-
 
 
 
@@ -103,10 +92,11 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    background-color: transparent;
 }
 .main-banner .carousel-btn{
     position: absolute;
-    top: 55%;
+    top: 50%;
     transform: translateY(-50%);
     z-index: 5;
 }

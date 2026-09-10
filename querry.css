@@ -1,0 +1,25 @@
+@media (max-width: 1024px){
+    .header-logo{
+        padding: 5px 0;
+    }
+    .header-menu-nav, .menu-categoris-nav ul{
+        display: none;
+    }
+    
+    .toggle{
+        display: block  ;
+    }
+    .menu-categorias {
+        margin: 0 auto;
+        display: flex;
+        align-items: flex-end;
+        justify-content: right;
+        padding: 10px 5px;
+    }
+    .header-assossiar-button{
+        margin-right: 10px;
+    }
+}
+@media (max-width: 768px){
+    .main-content-distribuidores .distribuidor{ flex: 0 0 130px }
+}

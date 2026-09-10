@@ -3,29 +3,22 @@
     background: #fff;
     background-image: url(https://rexon.com.br/wp-content/uploads/2021/01/bg_itens.png);
     background-position: center center;
-    padding:30px 0 ;
-    
+    padding:30px 0 ;  
 }   
 
 .info-catalogo{
     flex-direction: column;
     align-items: flex-start;
-    gap:20px;
-    
-    
+    gap:20px;    
 }
 
-
-.info-image{
-   
-   
+.info-image{    
     margin: 0 auto;
     align-items: center;
     display: flex;
 }
 
-.info-text {
-    
+.info-text {   
     max-width: 520px;
     min-height: 100px;
     padding: 5px;
@@ -42,17 +35,10 @@
     color: var(--e-global-color-text);
 }
 
-
-
-
-
-
-
 .contact{
     background-image: url(https://rexon.com.br/wp-content/uploads/2021/01/bg_contato.jpg);
     background-size:  100% 100%;
-    background-repeat: no-repeat;
-    
+    background-repeat: no-repeat;   
 }
 .contact-container{
     padding: 30px 0;
@@ -60,9 +46,7 @@
 }
 
 .contact-label{
-    
     align-items: flex-start;
-
     gap:30px;
     flex-direction: column;
 }
@@ -71,13 +55,11 @@
     font-size: 2.5rem;
     font-weight: bolder;
 }
+
 .contact .divider{
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 16' fill='none' stroke='%23ffff' stroke-width='2' stroke-linecap='square' stroke-miterlimit='10'%3E%3Cg transform='translate(-12,0)'%3E%3Cpath d='M28,0L10,18'/%3E%3Cpath d='M18,0L0,18'/%3E%3Cpath d='M48,0L30,18'/%3E%3Cpath d='M38,0L20,18'/%3E%3C/g%3E%3C/svg%3E");
 
 }
 .contact-text p{
     margin-bottom: 30px;
-}
-@media (max-width: 768px){
-    .main-content-distribuidores .distribuidor{ flex: 0 0 130px }
 }

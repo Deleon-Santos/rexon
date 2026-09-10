@@ -49,9 +49,7 @@
     height: auto;
     
 }
-.header-menu-nav ul{ 
-    gap: 40px;
-}
+
 
 .header-menu-nav ul li{
     list-style: none;

@@ -84,6 +84,15 @@
     .header-assossiar-button:hover{
         background: var(--e-global-color-65d2b2c8);
         color: var(--e-global-color-text);
-
     }
     
+    .toggle {
+        padding: 5px 10px   ;
+        font-size: 1.5rem;
+        color: var(--e-global-color-text);
+        
+        border-radius: 5px;
+        display: none;
+    }
+    
+     
