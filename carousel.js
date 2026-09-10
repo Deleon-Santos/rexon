@@ -1,9 +1,10 @@
-// Carrossel para o banner (slides full-width)
 (function(){
+    // 1. Carrossel do Banner
     function bannerCarousel(containerId, interval){
         const container = document.getElementById(containerId);
         if(!container) return;
         const track = container.querySelector('.carousel-track');
+        if(!track) return;
         const slides = Array.from(track.children);
         const prevBtn = container.querySelector('.carousel-btn.prev');
         const nextBtn = container.querySelector('.carousel-btn.next');
@@ -22,7 +23,7 @@
             stop();
             timer = setInterval(()=> goTo(index+1), interval || 4000);
         }
-        function stop(){ if(timer) { clearInterval(timer); timer = null }}
+        function stop(){ if(timer) { clearInterval(timer); timer = null; }}
 
         container.addEventListener('mouseenter', stop);
         container.addEventListener('mouseleave', start);
@@ -31,7 +32,7 @@
         start();
     }
 
-    // Carrossel para distribuidores (mostra múltiplos por view) com autoplay
+    // 2. Carrossel de Distribuidores
     function distributorsCarousel(containerId, interval){
         const container = document.getElementById(containerId);
         if(!container) return;
@@ -45,12 +46,18 @@
         let timer = null;
 
         function calcMetrics(){
-            items = Array.from(container.querySelectorAll('.distribuidor'));
+            // AJUSTE CRÍTICO: Agora selecionamos os links (<a>) que envelopam os distribuidores
+            items = Array.from(container.querySelectorAll('a'));
             if(items.length === 0) return { itemWidth: 0, visible: 1, maxIndex: 0 };
+            
             const itemStyle = items[0].getBoundingClientRect();
             const itemWidth = itemStyle.width;
-            const visible = Math.max(1, Math.floor(viewport.offsetWidth / (itemWidth + 30)));
+            const viewportWidth = viewport ? viewport.offsetWidth : container.offsetWidth;
+           // Dentro da função calcMetrics() no JS:
+            const visible = Math.max(1, Math.floor(viewport.offsetWidth / 210)); // 180px largura + 30px margem
             const maxIndex = Math.max(0, items.length - visible);
+            // Dentro da função calcMetrics() no JS:
+
             return { itemWidth, visible, maxIndex };
         }
 
@@ -65,59 +72,69 @@
         prevBtn && prevBtn.addEventListener('click', ()=>{ index = Math.max(0, index-1); update(); });
         nextBtn && nextBtn.addEventListener('click', ()=>{ const { maxIndex } = calcMetrics(); index = (index + 1) > maxIndex ? 0 : index + 1; update(); });
 
-        function start(){ stop(); timer = setInterval(()=>{ const { maxIndex } = calcMetrics(); index = (index + 1) > maxIndex ? 0 : index + 1; update(); }, interval || 4000); }
+        function start(){ 
+            stop(); 
+            timer = setInterval(()=>{ 
+                const { maxIndex } = calcMetrics(); 
+                index = (index + 4) > maxIndex ? 0 : index + 4; 
+                update(); 
+            }, interval || 4000); 
+        }
         function stop(){ if(timer){ clearInterval(timer); timer = null; } }
 
-        wrapper && wrapper.addEventListener('mouseenter', stop);
-        wrapper && wrapper.addEventListener('mouseleave', start);
-        window.addEventListener('resize', ()=> setTimeout(update,50));
+        if(wrapper) {
+            wrapper.addEventListener('mouseenter', stop);
+            wrapper.addEventListener('mouseleave', start);
+        }
+        window.addEventListener('resize', ()=> setTimeout(update, 50));
 
         update();
         start();
     }
 
-    // Carrega imagens de distribuidores a partir de um JSON e injeta no container
-    async function loadDistributors(containerId, jsonPath, limit){
+    // 3. Carregamento dos Distribuidores via JSON
+    function loadDistributors(containerId, jsonPath, limit) {
         const container = document.getElementById(containerId);
-        if(!container) return;
-        try{
-            let urls = null;
-            // tenta fetch do arquivo JSON
-            try{
-                const res = await fetch(jsonPath);
-                if(!res.ok) throw new Error('HTTP ' + res.status);
-                urls = await res.json();
-            }catch(fetchErr){
-                // fallback: procura um <script type="application/json" id="distributors-data"> no HTML
-                const script = document.getElementById('distributors-data');
-                if(script){
-                    try{ urls = JSON.parse(script.textContent); }catch(e){ urls = null }
-                }else{
-                    console.warn('Falha ao carregar', jsonPath, fetchErr);
-                }
-            }
-            const urlsArr = urls;
-            const items = Array.isArray(urls) ? urls : [];
-            items.forEach(u=>{
-                const div = document.createElement('div');
-                div.className = 'distribuidor';
-                const img = document.createElement('img');
-                img.src = u;
-                img.alt = 'logo distribuidor';
-                div.appendChild(img);
-                container.appendChild(div);
-            });
-            // inicializa o carrossel após injetar os itens (autoplay a cada 4s)
-            distributorsCarousel(containerId, 4000);
-        }catch(err){
-            console.error('Erro carregando distribuidores:', err);
-        }
+        if (!container) return;
+
+        fetch(jsonPath)
+            .then(response => {
+                if (!response.ok) throw new Error('Erro ao carregar o arquivo JSON');
+                return response.json();
+            })
+            .then(distribuidores => {
+                // Se um limite for especificado, corta o array
+                const itemsToRender = limit ? distribuidores.slice(0, limit) : distribuidores;
+
+                itemsToRender.forEach(item => {
+                    const link = document.createElement('a');
+                    link.href = item.siteUrl;
+                    link.target = '_blank';
+                    link.rel = 'noopener noreferrer';
+                    link.style.display = 'inline-block'; // Garante dimensões corretas para o carrossel
+
+                    const div = document.createElement('div');
+                    div.className = 'distribuidor';
+
+                    const img = document.createElement('img');
+                    img.src = item.imgUrl;
+                    img.alt = 'logo distribuidor';
+
+                    div.appendChild(img);
+                    link.appendChild(div);
+                    container.appendChild(link);
+                });
+
+                // Inicia o carrossel SOMENTE APÓS as marcas serem renderizadas na tela
+                distributorsCarousel(containerId, 4000);
+            })
+            .catch(error => console.error('Erro:', error));
     }
 
-    // Inicializa quando DOM estiver pronto
+    // Inicialização
     document.addEventListener('DOMContentLoaded', ()=>{
         bannerCarousel('main-banner', 4000);
-        // carrega distribuidores via JSON e mostra somente 5
-        loadDistributors('main-content-distribuidores', 'distributors.json', 5);
+        // Carrega o JSON com o nome correto e inicia o carrossel dinamicamente
+        loadDistributors('main-content-distribuidores', 'distributors.json');
     });
 })();
