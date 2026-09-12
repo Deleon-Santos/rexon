@@ -13,12 +13,10 @@
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    font-size: 14px;  
+    font-size: 12px;  
     padding: 0;
 }
 .header-topo-search{
-    
-   
     border: 1px solid var(--e-global-color-text);
     border-radius: 5px;
 }

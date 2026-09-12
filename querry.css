@@ -19,7 +19,39 @@
     .header-assossiar-button{
         margin-right: 10px;
     }
+    .info-catalogo-content,.contact-container{
+        flex-direction: column;
+    }
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 30px;
+    }
 }
 @media (max-width: 768px){
-    .main-content-distribuidores .distribuidor{ flex: 0 0 130px }
+
+    .topo input{
+        max-width: 150px;
+    }
+    .main-content-distribuidores .distribuidor{ 
+        flex: 0 0 130px ;
+    }
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .footer-menu{
+        padding: 0;
+        padding-bottom: 20px ;
+        height: auto;
+    }
+    .footer-logo{
+        padding-bottom: 30px;
+    }
+
+}
+@media (max-width: 575px){
+    
 }
