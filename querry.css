@@ -2,21 +2,28 @@
     .header-logo{
         padding: 5px 0;
     }
-    /* 1. Altere esta linha: Esconda a <nav> e não o <ul> diretamente */
-    .header-menu-nav, .menu-categoris-nav {
-        display: none;
+
+    /* ========================================================
+       1. MENU DE CATEGORIAS (.menu-categoris-nav) - COM TRANSIÇÃO
+       ======================================================== */
+    .menu-categorias {
+        position: relative;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 5px;
     }
 
-    /* 2. Mostra a <nav> e garante que o <ul> dentro dela fique visível */
-    .menu-categoris-nav.show {
-        display: block !important;
+    /* Mantém o elemento no layout para a animação funcionar */
+    .menu-categoris-nav {
+        display: block; 
     }
-    .menu-categorias{
-        position: relative;
-    }
-    .menu-categoris-nav.show ul {
-        display: flex !important; /* Ou display: block, dependendo do layout desejado */
-        flex-direction: column;   /* Para o menu responsivo abrir em lista vertical */
+
+    /* Estado inicial do UL de Categorias (Invisível) */
+    .menu-categoris-nav ul {
+        display: flex !important;
+        flex-direction: column;
         position: absolute;
         top: 55px;
         left: 5px;
@@ -24,36 +31,81 @@
         z-index: 1000;
         background-color: var(--e-global-color-secondary);
 
+        /* Propriedades da transição suave */
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out, visibility 0.4s;
     }
+
+    /* Estado do UL de Categorias ativado (.show) */
+    .menu-categoris-nav.show ul {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
     .menu-categoris-nav.show ul li{
         width: 95%;
         border-bottom: solid 1px var(--e-global-color-text);
     }
+
     .cascade.ativo {
         position: absolute;
         top: -110px;
         opacity: 1;
-
         visibility: visible;
-        
-        transform: translatex(290px);
+        transform: translateX(290px);
     }
 
 
-    
-    
-    .toggle{
-        display: block  ;
+    /* ========================================================
+       2. MENU PRINCIPAL (.header-menu-nav) - COM TRANSIÇÃO
+       ======================================================== */
+    .header-menu-nav {
+        display: block;
     }
 
-    .menu-categorias {
-        margin: 0 auto;
+    /* Estado inicial do UL do Header (Invisível) */
+    .header-menu-nav ul {
+        position: absolute;
+        top: 110px;
+        right: 5px;
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px 5px;
-        
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 0;
+        z-index: 1000;
+        background-color: var(--e-global-color-65d2b2c8);
+        min-width: 300px;
+
+        /* Propriedades da transição suave */
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out, visibility 0.4s;
     }
+
+    /* Estado do UL do Header ativado (.show) */
+    .header-menu-nav.show ul {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .header-menu-nav.show ul li{
+        border-bottom: solid 1px var(--e-global-color-secondary);
+        width: 100%;
+    }
+
+
+    /* ========================================================
+       3. OUTROS COMPONENTES
+       ======================================================== */
+    .toggle{
+        display: block;
+    }
+
     .header-assossiar-button{
         margin-right: 10px;
     }
@@ -61,7 +113,7 @@
         display: block;
     }
     #botao-categorias h3{
-        padding-right: 5px
+        padding-right: 5px;
     }
     #button-assossiar-categorias{
         display: none;
@@ -69,7 +121,7 @@
     .span-categoria{
         justify-content: right;
     }
-    .info-catalogo-content,.contact-container{
+    .info-catalogo-content, .contact-container{
         flex-direction: column;
     }
     .footer-content {
@@ -78,96 +130,4 @@
         grid-template-rows: repeat(2, auto);
         gap: 30px;
     }
-}
-@media (max-width: 768px){
-    
-    .main-content-distribuidores .distribuidor{ 
-        flex: 0 0 130px ;
-    }
-    .footer-content {
-        display: flex;
-        flex-direction: column;
-        
-    }
-    .footer-menu{
-        padding: 0;
-        padding-bottom: 20px ;
-        height: auto;
-    }
-    .footer-logo{
-        padding-bottom: 30px;
-    }
-
-}
-@media (max-width: 575px){
-    
-    .header-topo-search {
-        position: fixed;
-        top: 3px;
-        right: 5px;
-        z-index: 1000;
-        width: 35px;
-        height: 30px;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        transition: width 0.4s ease-in-out;
-    }
-    .header-topo-search input{
-        display: none;
-    }
-    .header-topo-search:hover {
-        width: 250px;
-        
-    }
-
-    .header-topo-search:hover input {
-        display: block;
-        background-color: var(--e-global-color-2e25d6e3);
-        width: 100%;
-        min-width: 0;
-        
-    }
-    
-    
-    .header-assossiar-button{
-        font-size: .8rem;
-        padding: 12px 10px;
-    }
-    #button-assossiar-menu{
-        display: none;
-    }
-    .menu-categorias{
-        position: relative;
-        
-    }
-    #button-assossiar-categorias{
-        display: block;
-        position: absolute;
-        top :8px;
-        left: 5px;
-        z-index: 1000;
-    }
-    
-
-    .header-logo img {
-        width: 100px;
-    }
-    .info-catalogo, .contact-form{
-        width: 100%;
-    }
-    .main-content-container {
-        text-align: center;
-    }
-    .card-container{
-        max-width: 100%;
-    }
-    .info-catalogo img {
-        width: 300px;
-    }
-    .form-row {
-    
-        
-        gap: 12px;
-    }   
 }
