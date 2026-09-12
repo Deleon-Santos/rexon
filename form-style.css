@@ -1,9 +1,9 @@
 .card-container {
     background-color: #ffffff;
-    width: 100%;
-    max-width: 485px;
     
-    padding: 40px 30px;
+    width: 520px;
+    
+    padding: 30px ;
     border-radius: 4px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }

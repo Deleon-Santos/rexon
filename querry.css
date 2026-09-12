@@ -2,22 +2,72 @@
     .header-logo{
         padding: 5px 0;
     }
-    .header-menu-nav, .menu-categoris-nav ul{
+    /* 1. Altere esta linha: Esconda a <nav> e não o <ul> diretamente */
+    .header-menu-nav, .menu-categoris-nav {
         display: none;
     }
+
+    /* 2. Mostra a <nav> e garante que o <ul> dentro dela fique visível */
+    .menu-categoris-nav.show {
+        display: block !important;
+    }
+    .menu-categorias{
+        position: relative;
+    }
+    .menu-categoris-nav.show ul {
+        display: flex !important; /* Ou display: block, dependendo do layout desejado */
+        flex-direction: column;   /* Para o menu responsivo abrir em lista vertical */
+        position: absolute;
+        top: 55px;
+        left: 5px;
+        width: 300px;
+        z-index: 1000;
+        background-color: var(--e-global-color-secondary);
+
+    }
+    .menu-categoris-nav.show ul li{
+        width: 95%;
+        border-bottom: solid 1px var(--e-global-color-text);
+    }
+    .cascade.ativo {
+        position: absolute;
+        top: -110px;
+        opacity: 1;
+
+        visibility: visible;
+        
+        transform: translatex(290px);
+    }
+
+
+    
     
     .toggle{
         display: block  ;
     }
+
     .menu-categorias {
         margin: 0 auto;
         display: flex;
-        align-items: flex-end;
-        justify-content: right;
+        align-items: center;
+        justify-content: space-between;
         padding: 10px 5px;
+        
     }
     .header-assossiar-button{
         margin-right: 10px;
+    }
+    .header .botao-categorias{
+        display: block;
+    }
+    #botao-categorias h3{
+        padding-right: 5px
+    }
+    #button-assossiar-categorias{
+        display: none;
+    }
+    .span-categoria{
+        justify-content: right;
     }
     .info-catalogo-content,.contact-container{
         flex-direction: column;
@@ -30,10 +80,7 @@
     }
 }
 @media (max-width: 768px){
-
-    .topo input{
-        max-width: 150px;
-    }
+    
     .main-content-distribuidores .distribuidor{ 
         flex: 0 0 130px ;
     }
@@ -54,14 +101,55 @@
 }
 @media (max-width: 575px){
     
-    .header-topo-contact{
-        display: none;
-
+    .header-topo-search {
+        position: fixed;
+        top: 3px;
+        right: 5px;
+        z-index: 1000;
+        width: 35px;
+        height: 30px;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        transition: width 0.4s ease-in-out;
     }
+    .header-topo-search input{
+        display: none;
+    }
+    .header-topo-search:hover {
+        width: 250px;
+        
+    }
+
+    .header-topo-search:hover input {
+        display: block;
+        background-color: var(--e-global-color-2e25d6e3);
+        width: 100%;
+        min-width: 0;
+        
+    }
+    
+    
     .header-assossiar-button{
         font-size: .8rem;
         padding: 12px 10px;
     }
+    #button-assossiar-menu{
+        display: none;
+    }
+    .menu-categorias{
+        position: relative;
+        
+    }
+    #button-assossiar-categorias{
+        display: block;
+        position: absolute;
+        top :8px;
+        left: 5px;
+        z-index: 1000;
+    }
+    
+
     .header-logo img {
         width: 100px;
     }
@@ -70,6 +158,9 @@
     }
     .main-content-container {
         text-align: center;
+    }
+    .card-container{
+        max-width: 100%;
     }
     .info-catalogo img {
         width: 300px;

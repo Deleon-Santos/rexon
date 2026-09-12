@@ -78,3 +78,18 @@
     font-size: .9rem;
     font-weight: var(--e-global-typography-primary-font-weight);
 }
+
+
+.header .botao-categorias{
+    margin:  0 auto;
+    width: 100%;
+    display:flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+.header .botao-categorias{
+    display: none;
+}

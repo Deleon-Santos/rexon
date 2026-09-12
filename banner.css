@@ -2,7 +2,7 @@
     flex-direction: column;
     gap: 30px;
     background: var(--e-global-color-secondary);
-    padding: 50px 0;
+    padding: 30px 0;
 }
 
 .main-banner{

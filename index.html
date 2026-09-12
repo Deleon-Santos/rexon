@@ -45,7 +45,7 @@
 
                     <div class="header-menu">
                         
-                        <nav class="header-menu-nav">
+                        <nav class="header-menu-nav" >
                             <ul class="flex-container padding-container">
                                 <li><a class="link" href="#head">HOME</a></li>
                                 <li><a class="link" href="https://rexon.com.br/quem-somos/">QUEM SOMOS</a></li>
@@ -56,7 +56,7 @@
                     </div>
 
                     <div class="header-assossiar flex-container">
-                        <a class="header-assossiar-button flex-container" href="https://rexon.com.br/quero-ser-revendedor/">Quero ser Revendedor</a>
+                        <a class="header-assossiar-button flex-container" id="button-assossiar-menu" href="https://rexon.com.br/quero-ser-revendedor/">Quero ser Revendedor</a>
                     <button class="toggle" id="menu-burger"><i class="fa-solid fa-bars"></i></button>
                     </div>
                     
@@ -65,7 +65,7 @@
 
             <div class="menu-categorias">
                 
-                <nav class="menu-categoris-nav viewport">
+                <nav class="menu-categoris-nav viewport" id="nav">
                     <ul class="flex-container">
                         <li><a class="link-cascade "id="correias" href="https://rexon.com.br/linhas-produto/correias-industriais/">
                             CORREIAS INDUSTRIAIS ▼</a></li>
@@ -85,7 +85,15 @@
                     </ul>
                 
                 </nav>
-                <div><button class="toggle" id="categirias"><i class="fa-solid fa-magnifying-glass"></i></button></div>
+
+                <div class="botao-categorias flex-container" id="botao-categorias">
+                    <a class="header-assossiar-button flex-container" id="button-assossiar-categorias"href="https://rexon.com.br/quero-ser-revendedor/">Quero ser Revendedor</a>
+                    
+                    <span class="span-categoria flex-container">
+                        <h3>CATEGORIAS:</h3>
+                        <button class="toggle" type="button" id="cat"><i class="fa-solid fa-list"></i></button>
+                    </span>
+                </div>
                 <div class="cascade" id="cascade"></div>
                
             </div>

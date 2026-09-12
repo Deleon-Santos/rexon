@@ -114,3 +114,20 @@ menuCategorias.addEventListener("mouseleave", () => {
     cascade.classList.remove("ativo");
 
 });
+document.addEventListener('DOMContentLoaded', () => {
+    // Tenta encontrar o botão e a nav
+    const btnToggle = document.getElementById('cat') || document.querySelector('.toggle');
+    const menuNav = document.querySelector('.menu-categoris-nav');
+
+    if (btnToggle && menuNav) {
+        btnToggle.addEventListener('click', (event) => {
+            event.preventDefault();
+            menuNav.classList.toggle('show');
+        });
+    } else {
+        console.warn('Verificação de elementos:', { 
+            botaoEncontrado: !!btnToggle, 
+            menuEncontrado: !!menuNav 
+        });
+    }
+});
