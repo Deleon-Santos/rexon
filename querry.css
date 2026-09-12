@@ -53,5 +53,13 @@
 
 }
 @media (max-width: 575px){
+    .info-catalogo, .contact-form{
+        width: 100%;
+    }
+   
+    .form-row {
     
+        
+        gap: 12px;
+    }   
 }

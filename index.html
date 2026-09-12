@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./menu-casade.css">
     <link rel="stylesheet" href="./banner.css">
     <link rel="stylesheet" href="./info-catalogo.css">
+    <link rel="stylesheet" href="./form-style.css">
     <link rel="stylesheet" href="./footer-style.css">
     <link rel="stylesheet" href="./distribuidores-style.css">
     <link rel="stylesheet" href="./querry.css">
@@ -165,8 +166,52 @@
                         <p>Entre em contato conosco. Estamso a disposição para tirar todas as suas dúvidas!</p>
                     </div>
                 </div>
+                
                 <div class="contact-form">
-                    <img src="./img/form.png" alt="img de formulario">
+                    <div class="card-container">
+                        <h1 class="card-title">Contato</h1>
+                        <p class="card-subtitle">Preencha o formulário abaixo para entrar em contato conosco.</p>
+
+                        <form class="contact-form" action="#" method="POST">
+                            
+                            <div class="form-row">
+                                <input type="text" class="form-control" name="nome" placeholder="Nome" required>
+                                <input type="tel" class="form-control" name="telefone" placeholder="Telefone" required>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="email" class="form-control" name="email" placeholder="Email" required>
+                            </div>
+
+                            <div class="form-row">
+                                <select class="form-control" name="tipo_perfil" required>
+                                    <option value="" disabled selected hidden>Eu sou:</option>
+                                    <option value="pf">Pessoa Física</option>
+                                    <option value="pj">Pessoa Jurídica</option>
+                                </select>
+                                <input type="text" class="form-control" name="cnpj" placeholder="CNPJ">
+                            </div>
+
+                            <div class="form-row">
+                                <input type="text" class="form-control" name="cidade" placeholder="Cidade" required>
+                                <input type="text" class="form-control" name="estado" placeholder="Estado" required>
+                            </div>
+
+                            <div class="form-group">
+                                <textarea class="form-control" name="mensagem" placeholder="Mensagem" rows="4" required></textarea>
+                            </div>
+
+                            <div class="recaptcha-badge">
+                                <span class="recaptcha-text">protegido por <strong>reCAPTCHA</strong></span>
+                                <div class="recaptcha-icon">
+                                    <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="reCAPTCHA">
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn-submit">Enviar</button>
+
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
