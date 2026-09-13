@@ -1,40 +1,54 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
-    const btnCat = document.getElementById('cat') 
+    // Seleção dos elementos do Menu de Categorias
+    const btnCat = document.getElementById('cat') || document.querySelector('.toggle');
     const navCat = document.querySelector('.menu-categoris-nav');
     const cascade = document.getElementById('cascade');
     const menuCategorias = document.querySelector('.menu-categorias');
 
-    
+    // Seleção dos elementos do Menu Burger (Topo)
     const btnBurger = document.getElementById('menu-burger');
     const navHeader = document.querySelector('.header-menu-nav');
 
-    
+    // 1. Toggle do Menu de Categorias
     if (btnCat && navCat) {
         btnCat.addEventListener('click', (event) => {
-            event.stopPropagation(); // Impede o clique de subir para o document
+            event.stopPropagation();
+            
+            // FECHA O MENU BURGER (se estiver aberto)
+            if (navHeader) {
+                navHeader.classList.remove('show');
+            }
+
+            // Alterna o Menu de Categorias
             navCat.classList.toggle('show');
         });
     }
 
-    
+    // 2. Toggle do Menu Burger
     if (btnBurger && navHeader) {
         btnBurger.addEventListener('click', (event) => {
-            event.stopPropagation(); // Impede o clique de subir para o document
+            event.stopPropagation();
+
+            // FECHA O MENU DE CATEGORIAS (se estiver aberto)
+            if (navCat) {
+                navCat.classList.remove('show');
+            }
+
+            // Alterna o Menu Burger
             navHeader.classList.toggle('show');
         });
     }
 
-  
+    // 3. Fechar Menus ao Clicar Fora
     document.addEventListener('click', (event) => {
-       
+        // Fechar Menu de Categorias se o clique for fora dele e do botão
         if (navCat && navCat.classList.contains('show')) {
             if (!navCat.contains(event.target) && !btnCat.contains(event.target)) {
                 navCat.classList.remove('show');
             }
         }
 
-        
+        // Fechar Menu Burger se o clique for fora dele e do botão
         if (navHeader && navHeader.classList.contains('show')) {
             if (!navHeader.contains(event.target) && !btnBurger.contains(event.target)) {
                 navHeader.classList.remove('show');
@@ -42,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-   
+    // 4. Fechar Cascade ao passar o mouse fora do container
     if (menuCategorias && cascade) {
         menuCategorias.addEventListener('mouseleave', () => {
             cascade.classList.remove('ativo');
