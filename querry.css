@@ -66,10 +66,13 @@
         display: block;
     }
 
+    .content-nav, .header-content{
+        position: relative;
+    }
     /* Estado inicial do UL do Header (Invisível) */
-    .header-menu-nav ul {
+    .content-nav .header-menu-nav ul {
         position: absolute;
-        top: 110px;
+        top: 80px;
         right: 5px;
         display: flex;
         flex-direction: column;
@@ -77,7 +80,7 @@
         padding: 15px 0;
         z-index: 1000;
         background-color: var(--e-global-color-65d2b2c8);
-        min-width: 300px;
+        min-width: 265px;
 
         /* Propriedades da transição suave */
         opacity: 0;
@@ -130,4 +133,102 @@
         grid-template-rows: repeat(2, auto);
         gap: 30px;
     }
+}
+@media (max-width: 768px){
+    
+    .main-content-distribuidores .distribuidor{ 
+        flex: 0 0 130px ;
+    }
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .footer-menu{
+        padding: 0;
+        padding-bottom: 20px ;
+        height: auto;
+    }
+    .footer-logo{
+        padding-bottom: 30px;
+    }
+
+}
+@media (max-width: 575px){
+    
+    .header-topo-search {
+        position: fixed;
+        top: 3px;
+        right: 5px;
+        z-index: 1000;
+        width: 35px;
+        height: 30px;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        transition: width 0.4s ease-in-out;
+    }
+    .header-topo-search input{
+        display: none;
+    }
+    .header-topo-search:hover {
+        width: 250px;
+        
+    }
+
+    .header-topo-search:hover input {
+        display: block;
+        background-color: var(--e-global-color-2e25d6e3);
+        width: 100%;
+        min-width: 0;
+        
+    }
+    
+    .content-nav .header-menu-nav ul {
+        top: 50px;
+        
+        min-width: 200px;
+
+    }
+
+    .header-assossiar-button{
+        font-size: .8rem;
+        padding: 12px 10px;
+    }
+    #button-assossiar-menu{
+        display: none;
+    }
+    .menu-categorias{
+        position: relative;
+        
+    }
+    #button-assossiar-categorias{
+        display: block;
+        position: absolute;
+        top :8px;
+        left: 5px;
+        z-index: 1000;
+    }
+    
+
+    .header-logo img {
+        width: 100px;
+    }
+    .info-catalogo, .contact-form{
+        width: 100%;
+    }
+    .main-content-container {
+        text-align: center;
+    }
+    .card-container{
+        max-width: 100%;
+    }
+    .info-catalogo img {
+        width: 300px;
+    }
+    .form-row {
+    
+        
+        gap: 12px;
+    }   
 }

@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    const btnCat = document.getElementById('cat') || document.querySelector('.toggle');
+    const btnCat = document.getElementById('cat') 
     const navCat = document.querySelector('.menu-categoris-nav');
     const cascade = document.getElementById('cascade');
     const menuCategorias = document.querySelector('.menu-categorias');
