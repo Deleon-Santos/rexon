@@ -14,7 +14,7 @@
         --e-global-color-a49f53f: #F9C42D;
         --e-global-color-8dfcf8f: #393a3c1b;
         --e-global-typography-primary-font-family: "Roboto";
-        --e-global-typography-primary-font-weight: 600;
+        --e-global-typography-primary-font-weight: 900;
         --e-global-typography-secondary-font-family: "Roboto";
         --e-global-typography-secondary-font-weight: 400;
         --e-global-typography-text-font-family: "Roboto";
@@ -94,6 +94,12 @@
         border-radius: 5px;
         display: none;
     }
-
+    #menu-burger{
+        background-color: var(--e-global-color-2e25d6e3);
+    }
     
+    #cat{
+        background-color: var(--e-global-color-76e28554);
+        color: var(--e-global-color-65d2b2c8);
+    }
      

@@ -139,6 +139,11 @@
     .main-content-distribuidores .distribuidor{ 
         flex: 0 0 130px ;
     }
+    .contact-label{
+       justify-content: center;
+       align-items: center;
+    }   
+    
     .footer-content {
         display: flex;
         flex-direction: column;
