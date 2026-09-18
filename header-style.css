@@ -19,6 +19,7 @@
 .header-topo-search{
     border: 1px solid var(--e-global-color-text);
     border-radius: 5px;
+    position: relative;
 }
 .topo p,  .topo input{
     color: var(--e-global-color-text);

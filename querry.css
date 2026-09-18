@@ -3,31 +3,22 @@
         padding: 5px 0;
     }
 
-    /* ========================================================
-       1. MENU DE CATEGORIAS (.menu-categoris-nav) - COM TRANSIÇÃO
-       ======================================================== */
     .menu-categorias {
         position: relative;
         margin: 0 auto;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: left;
         padding: 10px 5px;
     }
 
-    /* Mantém o elemento no layout para a animação funcionar */
-    .menu-categoris-nav {
-        display: block; 
-    }
-
-    /* Estado inicial do UL de Categorias (Invisível) */
     .menu-categoris-nav ul {
         display: flex !important;
         flex-direction: column;
         position: absolute;
         top: 55px;
         left: 5px;
-        width: 300px;
+        width: 290px;
         z-index: 1000;
         background-color: var(--e-global-color-secondary);
 
@@ -46,24 +37,17 @@
     }
 
     .menu-categoris-nav.show ul li{
+        justify-content: left;
         width: 95%;
         border-bottom: solid 1px var(--e-global-color-text);
     }
 
     .cascade.ativo {
         position: absolute;
-        top: -110px;
+        top: -10px;
         opacity: 1;
         visibility: visible;
-        transform: translateX(290px);
-    }
-
-
-    /* ========================================================
-       2. MENU PRINCIPAL (.header-menu-nav) - COM TRANSIÇÃO
-       ======================================================== */
-    .header-menu-nav {
-        display: block;
+        transform: translateX(280px);
     }
 
     .content-nav, .header-content{
@@ -143,7 +127,7 @@
        justify-content: center;
        align-items: center;
     }   
-    
+
     .footer-content {
         display: flex;
         flex-direction: column;
@@ -162,7 +146,7 @@
 @media (max-width: 575px){
     
     .header-topo-search {
-        position: fixed;
+        position: absolute;
         top: 3px;
         right: 5px;
         z-index: 1000;

@@ -30,7 +30,13 @@
     
 }
 .footer-logo a{ 
-    
+    text-decoration: none;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     background-color: var(--e-global-color-2e25d6e3);   
     padding: 8px;
@@ -40,7 +46,7 @@
         background-color 0.3s ease,
         border-color 0.3s ease,
         transform 0.3s ease;
-    
+    margin-bottom: 0px;
 }
 
 .footer-logo a:hover{
@@ -50,8 +56,11 @@
 }
 
 .footer-logo a i{
-    font-size: .9rem;
-    color:var(--e-global-color-text)
+    font-size: 1rem;
+    color:var(--e-global-color-text);
+    margin-bottom: 0px;
+
+    
 }   
 
 .footer-logo a:hover i{

@@ -21,6 +21,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Alterna o Menu de Categorias
             navCat.classList.toggle('show');
+            
+            const icon = btnCat.querySelector('i');
+
+            if (icon) {
+                if (navCat.classList.contains('show')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                } else {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
+            }
         });
     }
 
@@ -36,6 +48,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Alterna o Menu Burger
             navHeader.classList.toggle('show');
+            const icon = btnBurger.querySelector('i');
+
+            if (icon) {
+                if (navHeader.classList.contains('show')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                } else {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
+            }
         });
     }
 
@@ -45,13 +68,20 @@ document.addEventListener('DOMContentLoaded', () => {
         if (navCat && navCat.classList.contains('show')) {
             if (!navCat.contains(event.target) && !btnCat.contains(event.target)) {
                 navCat.classList.remove('show');
+                const icon = btnCat.querySelector('i');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
             }
+            
         }
 
         // Fechar Menu Burger se o clique for fora dele e do botão
         if (navHeader && navHeader.classList.contains('show')) {
             if (!navHeader.contains(event.target) && !btnBurger.contains(event.target)) {
                 navHeader.classList.remove('show');
+                const icon = btnBurger.querySelector('i');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
             }
         }
     });
