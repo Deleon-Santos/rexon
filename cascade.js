@@ -65,10 +65,10 @@ const links = document.querySelectorAll(".link-cascade");
 const cascade = document.getElementById("cascade");
 
 
-// Quando passar o mouse em uma categoria
+// Quando cli o mouse em uma categoria
 links.forEach(link => {
 
-    link.addEventListener("mouseenter", () => {
+    link.addEventListener("click", () => {
 
         const categoria = link.id;
 

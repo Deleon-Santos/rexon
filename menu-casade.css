@@ -35,7 +35,7 @@
     width: 0;
     height: 2px;
 
-    background: var(--e-global-color-2e25d6e3);
+    background: var(--e-global-color-secondary);
 
     transition:
         width 0.3s ease,

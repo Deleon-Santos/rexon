@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else {
                     icon.classList.remove('fa-xmark');
                     icon.classList.add('fa-bars');
+                    cascade.classList.remove('show');
                 }
             }
         });
@@ -68,6 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (navCat && navCat.classList.contains('show')) {
             if (!navCat.contains(event.target) && !btnCat.contains(event.target)) {
                 navCat.classList.remove('show');
+                cascade.classList.remove('show');
                 const icon = btnCat.querySelector('i');
                 icon.classList.remove('fa-xmark');
                 icon.classList.add('fa-bars');

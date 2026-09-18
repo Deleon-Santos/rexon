@@ -26,7 +26,7 @@
         opacity: 0;
         visibility: hidden;
         transform: translateY(-10px);
-        transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out, visibility 0.4s;
+        transition: opacity 0.1s ease-in-out, transform 0.4s ease-in-out, visibility 0.4s;
     }
 
     /* Estado do UL de Categorias ativado (.show) */
@@ -41,7 +41,13 @@
         width: 95%;
         border-bottom: solid 1px var(--e-global-color-text);
     }
-
+    .menu-categoris-nav.show a{
+        width: 90%;
+        font-size: .8rem;
+    }
+    .menu-categoris-nav.show a:hover{
+        transform: scaleX(1.02);
+    }
     .cascade.ativo {
         position: absolute;
         top: -10px;
@@ -69,8 +75,8 @@
         /* Propriedades da transição suave */
         opacity: 0;
         visibility: hidden;
-        transform: translateY(-10px);
-        transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out, visibility 0.4s;
+        transform: translatex(10px);
+        transition: opacity 0.1s ease-in-out, transform 0.4s ease-in-out, visibility 0.4s;
     }
 
     /* Estado do UL do Header ativado (.show) */
