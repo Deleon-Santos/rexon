@@ -16,12 +16,14 @@
         display: flex !important;
         flex-direction: column;
         position: absolute;
-        top: 55px;
+        top: 57px;
         left: 5px;
-        width: 290px;
+        width: 240px;
         z-index: 1000;
         background-color: var(--e-global-color-secondary);
-
+        border-radius: 0 0 5px 0;
+        
+        box-shadow: 1px 1px 2px;
         /* Propriedades da transição suave */
         opacity: 0;
         visibility: hidden;
@@ -38,24 +40,36 @@
 
     .menu-categoris-nav.show ul li{
         justify-content: left;
-        width: 95%;
-        border-bottom: solid 1px var(--e-global-color-text);
+        width: 99%;
+        border-bottom: solid 1px var(--e-global-color-8dfcf8f);
+        padding: 0;
+    }
+    .menu-categoris-nav.show li:hover{
+        background-color: var(--e-global-color-1e380458);
+        
     }
     .menu-categoris-nav.show a{
-        width: 90%;
-        font-size: .8rem;
+        width: 95%;
+        font-size: .7rem;
+        margin: 15px 5px;
     }
     .menu-categoris-nav.show a:hover{
         transform: scaleX(1.02);
+        color: var(--e-global-color-65d2b2c8);
+        
     }
     .cascade.ativo {
         position: absolute;
         top: -10px;
         opacity: 1;
         visibility: visible;
-        transform: translateX(280px);
+        transform: translateX(160px);
+        box-shadow: 1px 1px 2px;
+        border-radius: 0 0 5px 0;
     }
-
+    .cascade.ativo a{
+        font-size: .8rem;
+    }
     .content-nav, .header-content{
         position: relative;
     }
@@ -66,8 +80,8 @@
         right: 5px;
         display: flex;
         flex-direction: column;
-        gap: 15px;
-        padding: 15px 0;
+        
+        padding:  0;
         z-index: 1000;
         background-color: var(--e-global-color-65d2b2c8);
         min-width: 265px;
@@ -75,12 +89,14 @@
         /* Propriedades da transição suave */
         opacity: 0;
         visibility: hidden;
-        transform: translatex(10px);
+        transform: translatey(-10px);
         transition: opacity 0.1s ease-in-out, transform 0.4s ease-in-out, visibility 0.4s;
     }
 
     /* Estado do UL do Header ativado (.show) */
     .header-menu-nav.show ul {
+        display: flex;
+        align-items: center;
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
@@ -89,6 +105,7 @@
     .header-menu-nav.show ul li{
         border-bottom: solid 1px var(--e-global-color-secondary);
         width: 100%;
+        padding: 10px 0;
     }
 
 

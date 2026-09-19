@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (navCat && navCat.classList.contains('show')) {
             if (!navCat.contains(event.target) && !btnCat.contains(event.target)) {
                 navCat.classList.remove('show');
-                cascade.classList.remove('show');
+                cascade.classList.remove('show','ativo');
                 const icon = btnCat.querySelector('i');
                 icon.classList.remove('fa-xmark');
                 icon.classList.add('fa-bars');
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 4. Fechar Cascade ao passar o mouse fora do container
     if (menuCategorias && cascade) {
         menuCategorias.addEventListener('mouseleave', () => {
-            cascade.classList.remove('ativo');
+            cascade.classList.remove('ativo','show');
         });
     }
 });
