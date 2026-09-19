@@ -2,7 +2,7 @@
     max-width: 1160px;
     width: 100%;
     margin: 20px auto;
-    position: relative; /* Permite posicionar os botões se necessário */
+    position: relative; 
     box-sizing: border-box;
     padding: 0 10px;
 }
@@ -27,17 +27,15 @@
     will-change: transform;
     margin: 20px 0;
     box-sizing: border-box;
-    /* Remover o 'gap' do CSS para não conflitar com a margem do elemento */
 }
 
-/* AJUSTE CRÍTICO: Definir as dimensões diretamente na tag <a> */
 #main-content-distribuidores > a {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 0 0 180px; /* Garante tamanho fixo para o cálculo do carrossel */
+    flex: 0 0 180px; 
     width: 180px;
-    margin-right: 30px; /* Substitui o 'gap' para casar perfeitamente com o JS */
+    margin-right: 30px; 
     text-decoration: none;
     box-sizing: border-box;
 }
@@ -53,7 +51,7 @@
 #main-content-distribuidores .distribuidor img {
     display: block;
     width: 100%;
-    max-width: 140px; /* Largura máxima da logo */
+    max-width: 140px; 
     height: 120px;
     object-fit: contain;
 }

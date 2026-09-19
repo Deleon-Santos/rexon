@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnBurger = document.getElementById('menu-burger');
     const navHeader = document.querySelector('.header-menu-nav');
 
-    // 1. Toggle do Menu de Categorias
+    // Toggle do Menu de Categorias
     if (btnCat && navCat) {
         btnCat.addEventListener('click', (event) => {
             event.stopPropagation();
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. Toggle do Menu Burger
+    // Toggle do Menu Burger
     if (btnBurger && navHeader) {
         btnBurger.addEventListener('click', (event) => {
             event.stopPropagation();
@@ -45,8 +45,11 @@ document.addEventListener('DOMContentLoaded', () => {
             // FECHA O MENU DE CATEGORIAS (se estiver aberto)
             if (navCat) {
                 navCat.classList.remove('show');
+                const icon = btnCat.querySelector('i');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
             }
-
+            
             // Alterna o Menu Burger
             navHeader.classList.toggle('show');
             const icon = btnBurger.querySelector('i');
@@ -63,13 +66,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 3. Fechar Menus ao Clicar Fora
+    // Fechar Menus ao Clicar Fora
     document.addEventListener('click', (event) => {
         // Fechar Menu de Categorias se o clique for fora dele e do botão
         if (navCat && navCat.classList.contains('show')) {
             if (!navCat.contains(event.target) && !btnCat.contains(event.target)) {
                 navCat.classList.remove('show');
                 cascade.classList.remove('show','ativo');
+                
                 const icon = btnCat.querySelector('i');
                 icon.classList.remove('fa-xmark');
                 icon.classList.add('fa-bars');
@@ -88,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 4. Fechar Cascade ao passar o mouse fora do container
+    // Fechar Cascade ao passar o mouse fora do container
     if (menuCategorias && cascade) {
         menuCategorias.addEventListener('mouseleave', () => {
             cascade.classList.remove('ativo','show');

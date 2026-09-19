@@ -64,20 +64,16 @@ const categorias = {
 const links = document.querySelectorAll(".link-cascade");
 const cascade = document.getElementById("cascade");
 
-
-// Quando cli o mouse em uma categoria
+// Quando clico o mouse em uma categoria
 links.forEach(link => {
 
     link.addEventListener("click", () => {
-
         const categoria = link.id;
-
         const produtos = categorias[categoria];
 
         if (!produtos) {
             return;
         }
-
 
         cascade.innerHTML = `
             <ul class="cascade-list">
@@ -92,16 +88,11 @@ links.forEach(link => {
         const linkRect = link.getBoundingClientRect();
         const menuRect = cascade.parentElement.getBoundingClientRect();
 
-
         // posiciona exatamente abaixo do link
         cascade.style.left = `${linkRect.left - menuRect.left}px`;
-
         cascade.style.top = `${linkRect.bottom - menuRect.top}px`;
             
-
         cascade.classList.add("ativo");
-
     });
-
 });
 
