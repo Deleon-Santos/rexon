@@ -1,10 +1,10 @@
 # Projeto de Reprodução do Site Rexon
-![img baner](./img/baner.png)
+![img baner](./src/img/baner.png)
 # deploy [Aqui!](https://deleon-santos.github.io/rexon/)
 
 ### Visão Geral
 
-Este projeto consiste na reprodução e reconstrução da interface de um site originalmente desenvolvido utilizando **WordPress**, migrando sua implementação para uma estrutura baseada em tecnologias fundamentais do desenvolvimento web:
+Este projeto consiste na reconstrução da interface inicial do site de **Daisan Produtos Industriais** originalmente desenvolvido utilizando **WordPress** para uma estrutura baseada em tecnologias fundamentais do desenvolvimento web:
 
 * HTML5
 * CSS3
@@ -23,6 +23,7 @@ A estrutura HTML utiliza `viewport` para configuração inicial da visualizaçã
 # Objetivo do Projeto
 
 O objetivo do projeto é refatorar uma versão independente da interface originalmente disponibilizada com WordPress.
+**Todas as imagens e informações foram baixadas ou linkadas dos site original ou de seus assossiados**.
 
 A proposta envolve:
 
@@ -89,7 +90,7 @@ Atualmente existem scripts separados para funcionalidades específicas:
 O `cascade.js` está relacionado ao comportamento do menu de categorias.
 
 O `carousel.js` é responsável pelo comportamento dos carrosséis existentes na página.
-
+O `menu-burguer` é responável interação com a navegação entre as rotas do site e categorias de produtos em dispositivos mobile.
 A utilização de arquivos JavaScript separados permite evitar que toda a lógica fique concentrada em um único arquivo.
 
 ---
@@ -173,56 +174,6 @@ O objetivo será manter a mesma identidade visual e arquitetura utilizada na pá
 Outra etapa futura será transformar elementos atualmente estáticos em funcionalidades reais.
 
 Possíveis integrações:
-
-### Formulário de contato
-
-```text
-Formulário
-     ↓
-JavaScript
-     ↓
-API
-     ↓
-Backend
-     ↓
-E-mail / Banco de dados
-```
-
-# Integração com APIs
-
-A aplicação poderá futuramente utilizar APIs externas para obter informações em tempo real.
-
-Exemplos de possíveis integrações:
-
-* APIs de mapas;
-* serviços de localização;
-* APIs de redes sociais;
-* serviços de envio de e-mail;
-* sistemas de CRM;
-* sistemas de catálogo;
-* APIs próprias da empresa.
-
-Essa evolução permitirá transformar a aplicação de uma réplica visual em uma aplicação web efetivamente funcional.
-
----
-
-# Adaptação para Dispositivos Móveis
-
-Uma das principais etapas futuras será aprimorar a responsividade.
-
-Entre as adaptações previstas estão:
-
-* criação de menu hamburger;
-* reorganização do header;
-* redimensionamento das imagens;
-* adaptação dos carrosséis;
-* alteração de colunas para uma única coluna;
-* ajuste de fontes;
-* redução de espaçamentos;
-* adaptação dos botões;
-* melhoria da navegação por toque.
-
-O objetivo é garantir que a experiência de utilização seja consistente independentemente do dispositivo.
 
 ---
 
