@@ -16,7 +16,7 @@
         display: flex !important;
         flex-direction: column;
         position: absolute;
-        top: 60px;
+        top: 59px;
         left: 5px;
         width: 240px;
         z-index: 1000;
@@ -38,13 +38,12 @@
     .menu-categoris-nav.show ul li{
         justify-content: left;
         width: 99%;
-        border-bottom: solid 1px var(--e-global-color-8dfcf8f);
+        border-bottom: solid 1px var(--e-global-color-border);
         padding: 0;
     }
 
     .menu-categoris-nav.show li:hover{
-        background-color: var(--e-global-color-1e380458);
-        
+        background-color: var(--e-global-color-botao);     
     }
 
     .menu-categoris-nav.show a{
@@ -55,7 +54,7 @@
 
     .menu-categoris-nav.show a:hover{
         transform: scaleX(1.02);
-        color: var(--e-global-color-65d2b2c8);       
+        color: var(--e-global-color-primary);       
     }
 
     .cascade.ativo {
@@ -81,11 +80,10 @@
         top: 80px;
         right: 5px;
         display: flex;
-        flex-direction: column;
-        
+        flex-direction: column;       
         padding:  0;
         z-index: 1000;
-        background-color: var(--e-global-color-65d2b2c8);
+        background-color: var(--e-global-color-primary);
         min-width: 265px;
         opacity: 0;
         visibility: hidden;
@@ -194,11 +192,16 @@
 
     .header-topo-search:hover input {
         display: block;
-        background-color: var(--e-global-color-2e25d6e3);
+        background-color: var(--e-global-color-base1);
         width: 100%;
         min-width: 0;   
     }
     
+    .toggle{
+        width: 20px;
+        height: 20px;
+        font-size: 1rem;
+    }
     .content-nav .header-menu-nav ul {
         top: 50px;       
         min-width: 200px;

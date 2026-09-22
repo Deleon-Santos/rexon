@@ -1,18 +1,13 @@
     :root {
-        --e-global-color-primary: #6EC1E4;
         --e-global-color-secondary: #dfe2e7;
         --e-global-color-text: #2c2b2b;
-        --e-global-color-accent: #61CE70;
-        --e-global-color-1e380458: #28377e;
-        --e-global-color-168ad849: #23A455;
-        --e-global-color-65d2b2c8: #FFF;
-        --e-global-color-76e28554: #000;
-        --e-global-color-765a86d6: #F29400;
-        --e-global-color-3f507803: #14245A;
-        --e-global-color-33c9269e: #F7941E;
-        --e-global-color-2e25d6e3: #FFCC01;
-        --e-global-color-a49f53f: #F9C42D;
-        --e-global-color-8dfcf8f: #393a3c1b;
+        --e-global-color-botao: #28377e;   
+        --e-global-color-primary: #FFF;
+        --e-global-color-negrito: #000;
+        --e-global-color-base2: #F29400;    
+        --e-global-color-base3: #F7941E;
+        --e-global-color-base1: #FFCC01;
+        --e-global-color-border: #00000034;
         --e-global-typography-primary-font-family: "Roboto";
         --e-global-typography-primary-font-weight: 900;
         --e-global-typography-secondary-font-family: "Roboto";
@@ -64,14 +59,14 @@
     }
 
     .link:hover {
-        color: var(--e-global-color-2e25d6e3);
+        color: var(--e-global-color-base1);
         transform: scale(1.1);   
     }  
 
     .header-assossiar-button{
         text-decoration: none;
-        background: var(--e-global-color-1e380458);
-        color: var(--e-global-color-65d2b2c8);
+        background: var(--e-global-color-botao);
+        color: var(--e-global-color-primary);
         border: 1px solid var(--e-global-color-text);
         padding: 10px 25px;
         font-size: 1rem;
@@ -82,7 +77,7 @@
     }
 
     .header-assossiar-button:hover{
-        background: var(--e-global-color-65d2b2c8);
+        background: var(--e-global-color-primary);
         color: var(--e-global-color-text);
     }
     
@@ -94,14 +89,15 @@
         height: 40px;
         border-radius: 5px;
         display: none;
+        cursor: pointer;
     }
     
     #menu-burger{
-        background-color: var(--e-global-color-2e25d6e3);
+        background-color: var(--e-global-color-base1);
     }
     
     #cat{
-        background-color: var(--e-global-color-76e28554);
-        color: var(--e-global-color-65d2b2c8);
+        background-color: var(--e-global-color-negrito);
+        color: var(--e-global-color-primary);
     }
      

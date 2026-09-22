@@ -4,7 +4,7 @@
 }
 
 .footer  h3, .footer  i, .footer  p, .footer  a {
-    color: var(--e-global-color-65d2b2c8); 
+    color: var(--e-global-color-primary); 
     margin-bottom: 10px
 }
 
@@ -41,7 +41,7 @@
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    background-color: var(--e-global-color-2e25d6e3);   
+    background-color: var(--e-global-color-base1);   
     padding: 8px;
     box-sizing: border-box;
     border: 2px solid transparent;
@@ -53,7 +53,7 @@
 }
 
 .footer-logo a:hover{
-    border: 2px solid var(--e-global-color-2e25d6e3);
+    border: 2px solid var(--e-global-color-base1);
     background-color: var(--e-global-color-text); 
     transition: all 0.3s ease-in-out;
 }
@@ -67,7 +67,7 @@
 }   
 
 .footer-logo a:hover i{
-    color: var(--e-global-color-2e25d6e3);
+    color: var(--e-global-color-base1);
     transition: all 0.3s ease-in-out;
 }
 
@@ -95,7 +95,7 @@
 
 .footer-menu ul li a{
      display: inline-block;
-    color: var(--e-global-color-65d2b2c8);
+    color: var(--e-global-color-primary);
     text-decoration: none;
     font-size: .9rem;
     transition: transform .3s ease-in-out,
@@ -103,12 +103,12 @@
 }
 
 .footer-menu a:hover{
-    color: var(--e-global-color-2e25d6e3);
+    color: var(--e-global-color-base1);
     transform: scale(1.03)
 }
     
 .footer-assossiar-button{
-    background: var(--e-global-color-2e25d6e3);
+    background: var(--e-global-color-base1);
     color: var(--e-global-color-text);   
 }
 

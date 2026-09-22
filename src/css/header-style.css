@@ -1,8 +1,8 @@
 .header{
-    background: var(--e-global-color-65d2b2c8);
+    background: var(--e-global-color-primary);
 }
 .topo{
-    background: var(--e-global-color-2e25d6e3);
+    background: var(--e-global-color-base1);
     color: var(--e-global-color-text);
     margin: 0 auto;
     padding:  9px 0;
@@ -45,10 +45,8 @@
 }
 .header-logo img{
     width: 180px;
-    height: auto;
-    
+    height: auto; 
 }
-
 
 .header-menu-nav ul li{
     list-style: none;
@@ -58,7 +56,7 @@
     color: var(--e-global-color-text);
     text-decoration: none;
     font-size: 1rem;
-    font-weight: var(--e-global-typography-text-font-weight);
+    font-weight: var(--e-global-typography-primary-font-weight);
 }
 
 

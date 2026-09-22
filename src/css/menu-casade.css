@@ -12,7 +12,7 @@
 }
 
 .link-cascade:hover {
-    color: var(--e-global-color-76e28554);
+    color: var(--e-global-color-primary);
     transform: scale(1.08);
 }
 
@@ -23,7 +23,7 @@
     left: 50%;
     width: 0;
     height: 2px;
-    background: var(--e-global-color-1e380458);
+    background: var(--e-global-color-secundary);
     transition:
         width 0.3s ease,
         left 0.3s ease;
@@ -64,7 +64,7 @@
 
 .cascade li {
     margin: 0;
-    border-bottom: 1px solid var(--e-global-color-8dfcf8f);
+    border-bottom: 1px solid var(--e-global-color-border);
 }
 
 .cascade a {
@@ -77,10 +77,10 @@
 }
 
 .cascade li:hover {
-    background: var(--e-global-color-1e380458);
+    background: var(--e-global-color-botao);
 }
 
 .cascade a:hover {
-    color: var(--e-global-color-65d2b2c8);   
-    background: var(--e-global-color-1e380458);
+    color: var(--e-global-color-primary);   
+    background: var(--e-global-color-botao);
 }
