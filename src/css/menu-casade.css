@@ -12,7 +12,7 @@
 }
 
 .link-cascade:hover {
-    color: var(--e-global-color-2e25d6e3);
+    color: var(--e-global-color-76e28554);
     transform: scale(1.08);
 }
 
@@ -23,7 +23,7 @@
     left: 50%;
     width: 0;
     height: 2px;
-    background: var(--e-global-color-secondary);
+    background: var(--e-global-color-1e380458);
     transition:
         width 0.3s ease,
         left 0.3s ease;
