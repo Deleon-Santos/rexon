@@ -95,9 +95,17 @@
     #menu-burger{
         background-color: var(--e-global-color-base1);
     }
+    #menu-burger:hover{
+        background-color: var(--e-global-color-primary);
+    }
+
     
     #cat{
         background-color: var(--e-global-color-negrito);
         color: var(--e-global-color-primary);
+    }
+    #cat:hover{
+        background-color: var(--e-global-color-primary);
+        color: var(--e-global-color-text);
     }
      

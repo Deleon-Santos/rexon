@@ -103,21 +103,8 @@ textarea.form-control {
     height: 22px;
 }
 
-.btn-submit {
-    background-color: #122253;
-    color: #ffffff;
-    border: none;
-    border-radius: 4px;
-    padding: 10px 32px;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
-    align-self: flex-start;
-    margin-top: 8px;
-    transition: background-color 0.2s ease;
-}
 
-.btn-submit:hover {
-    background-color: #0b1638;
+.contact-form .header-assossiar-button{
+    width: 198px;
 }
 
