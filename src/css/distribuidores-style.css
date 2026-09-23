@@ -14,9 +14,12 @@
 
 .main-content-distribuidores-wrapper .carousel-btn {
     background: transparent; 
-    color: var(--e-global-color-76e28554); 
-    font-weight: 700;
+    color: var(--e-global-color-text); 
+    
+    
+    
 }
+
 
 #main-content-distribuidores {
     display: flex;
