@@ -198,9 +198,11 @@
     }
     
     .toggle{
+        display: flex;
         width: 30px;
         height: 30px;
         font-size: 1rem;
+        justify-content: center;
     }
     .content-nav .header-menu-nav ul {
         top: 50px;       
@@ -232,6 +234,21 @@
         width: 100px;
     }
 
+    
+
+    #main-content-distribuidores > a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 300px;
+        min-width: 0;
+        max-width: 250px;
+
+        
+    }
+    #main-content-distribuidores > a img{
+        min-width: 240px;
+    }
     .info-catalogo, .contact-form{
         width: 100%;
     }

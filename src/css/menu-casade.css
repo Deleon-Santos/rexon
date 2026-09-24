@@ -12,7 +12,7 @@
 }
 
 .link-cascade:hover {
-    color: var(--e-global-color-primary);
+    color: var(--e-global-color-botao);
     transform: scale(1.08);
 }
 
